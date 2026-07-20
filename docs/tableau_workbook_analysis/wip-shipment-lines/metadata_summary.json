@@ -1,0 +1,66 @@
+{
+  "source_workbook": "tableau/my-tableau-dashboards/WIP Shipment Lines.twbx",
+  "embedded_twb": "WIP Shipment Lines.twb",
+  "primary_dashboard": "WIP Shipment Lines Dashboard",
+  "dashboards": [
+    "WIP Shipment Lines Dashboard"
+  ],
+  "worksheet_count": 3,
+  "datasource_count": 1,
+  "calculated_field_count": 3,
+  "lod_calculation_count": 0,
+  "table_calculation_count": 0,
+  "screenshot": "docs/tableau_workbook_analysis/wip-shipment-lines/WIP-Shipment-Lines-Dashboard.jpeg",
+  "likely_lineage_matches": [
+    {
+      "path": "models/4_marts/dimensions/dim_wip_jobs_and_operations.sql",
+      "score": 77.0,
+      "reason": "normalized substring; shared tokens: dim, jobs, operations, wip"
+    },
+    {
+      "path": "models/4_marts/dimensions/dim_item_master.sql",
+      "score": 69.0,
+      "reason": "normalized substring; shared tokens: dim, item, master"
+    },
+    {
+      "path": "models/4_marts/dimensions/dim_wip_jobs.sql",
+      "score": 69.0,
+      "reason": "normalized substring; shared tokens: dim, jobs, wip"
+    },
+    {
+      "path": "models/4_marts/dimensions/dim_wip_jobs_batch_completions.sql",
+      "score": 24.0,
+      "reason": "shared tokens: dim, jobs, wip"
+    },
+    {
+      "path": "models/4_marts/dimensions/dim_wip_jobs_completions.sql",
+      "score": 24.0,
+      "reason": "shared tokens: dim, jobs, wip"
+    },
+    {
+      "path": "models/4_marts/dimensions/dim_wip_reservations_on_sales_orders.sql",
+      "score": 24.0,
+      "reason": "shared tokens: dim, reservations, wip"
+    },
+    {
+      "path": "analyses/recommend_me_columns_initial/wip/rmc_wip_discrete_jobs.sql",
+      "score": 16.0,
+      "reason": "shared tokens: jobs, wip"
+    },
+    {
+      "path": "analyses/recommend_me_columns_initial/wip/rmc_wip_operations.sql",
+      "score": 16.0,
+      "reason": "shared tokens: operations, wip"
+    },
+    {
+      "path": "analyses/recommend_me_columns_initial/wip/rmc_wip_requirement_operations.sql",
+      "score": 16.0,
+      "reason": "shared tokens: operations, wip"
+    },
+    {
+      "path": "models/1_sources/mrp/src_mrp_item_wip_entities.sql",
+      "score": 16.0,
+      "reason": "shared tokens: item, wip"
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "source_workbook": "tableau/my-tableau-dashboards/Dynamic Daily Rates_PROD.twbx",
+  "embedded_twb": "Dynamic Daily Rates_PROD.twb",
+  "primary_dashboard": "Dynamic Daily Rates Dashboard",
+  "dashboards": [
+    "Dynamic Daily Rates Dashboard",
+    "forLegend.All Dynamic Rates Dashboard"
+  ],
+  "worksheet_count": 10,
+  "datasource_count": 2,
+  "calculated_field_count": 22,
+  "lod_calculation_count": 0,
+  "table_calculation_count": 0,
+  "screenshot": "docs/tableau_workbook_analysis/dynamic-daily-rates-prod/Dynamic-Daily-Rates-Dashboard.jpeg",
+  "likely_lineage_matches": [
+    {
+      "path": "models/4_marts/move_trxns_dynamic_daily_rate.sql",
+      "score": 140.0,
+      "reason": "exact normalized name; shared tokens: daily, dynamic, move, rate, trxns"
+    },
+    {
+      "path": "models/3_intermediate/int_move_trxns_dynamic_daily_rate.sql",
+      "score": 85.0,
+      "reason": "normalized substring; shared tokens: daily, dynamic, move, rate, trxns"
+    },
+    {
+      "path": "models/3_intermediate/int_move_trxns_dynamic_daily_rate_part2.sql",
+      "score": 85.0,
+      "reason": "normalized substring; shared tokens: daily, dynamic, move, rate, trxns"
+    },
+    {
+      "path": "models/4_marts/move_trxns_dynamic_daily_rate_part_2.sql",
+      "score": 85.0,
+      "reason": "normalized substring; shared tokens: daily, dynamic, move, rate, trxns"
+    },
+    {
+      "path": "models/9_optimized_compiled_sql/move_trxns_dynamic_daily_rate_dev.sql",
+      "score": 85.0,
+      "reason": "normalized substring; shared tokens: daily, dynamic, move, rate, trxns"
+    },
+    {
+      "path": "models/9_optimized_compiled_sql/move_trxns_dynamic_daily_rate_prod.sql",
+      "score": 85.0,
+      "reason": "normalized substring; shared tokens: daily, dynamic, move, rate, trxns"
+    },
+    {
+      "path": "knowledgebase/tableau/Dynamic_Daily_Rates_PROD_tableau_data_catalog_lineage.md",
+      "score": 69.0,
+      "reason": "normalized substring; shared tokens: daily, dynamic, rates"
+    },
+    {
+      "path": "analyses/supporting_tools/data_quality/AddNavStrikePNs_move_trxns_dynamic.sql",
+      "score": 24.0,
+      "reason": "shared tokens: dynamic, move, trxns"
+    },
+    {
+      "path": "models/3_intermediate/int_agg_move_trxns.sql",
+      "score": 16.0,
+      "reason": "shared tokens: move, trxns"
+    },
+    {
+      "path": "models/3_intermediate/int_move_trxns_wip_job_start.sql",
+      "score": 16.0,
+      "reason": "shared tokens: move, trxns"
+    }
+  ]
+}

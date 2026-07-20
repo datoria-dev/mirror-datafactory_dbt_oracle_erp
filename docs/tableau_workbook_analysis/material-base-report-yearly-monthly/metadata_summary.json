@@ -1,0 +1,66 @@
+{
+  "source_workbook": "tableau/my-tableau-dashboards/Material Base Report Yearly Monthly.twbx",
+  "embedded_twb": "Material Base Report Yearly Monthly (2).twb",
+  "primary_dashboard": "NSS Material Base Report",
+  "dashboards": [
+    "NSS Material Base Report"
+  ],
+  "worksheet_count": 3,
+  "datasource_count": 1,
+  "calculated_field_count": 2,
+  "lod_calculation_count": 0,
+  "table_calculation_count": 1,
+  "screenshot": null,
+  "likely_lineage_matches": [
+    {
+      "path": "models/9_optimized_compiled_sql/minus_wip_valuation_conv_oh__agg_monthly.sql",
+      "score": 101.0,
+      "reason": "normalized substring; shared tokens: agg, conv, minus, monthly, oh, valuation, wip"
+    },
+    {
+      "path": "models/9_optimized_compiled_sql/minus_wip_valuation_conv_oh.sql",
+      "score": 85.0,
+      "reason": "normalized substring; shared tokens: conv, minus, oh, valuation, wip"
+    },
+    {
+      "path": "models/4_marts/dimensions/dim_fiscal_and_calendar_dates.sql",
+      "score": 77.0,
+      "reason": "normalized substring; shared tokens: calendar, dates, dim, fiscal"
+    },
+    {
+      "path": "models/4_marts/wip_valuation_conv_oh.sql",
+      "score": 77.0,
+      "reason": "normalized substring; shared tokens: conv, oh, valuation, wip"
+    },
+    {
+      "path": "models/4_marts/dimensions/dim_item_master.sql",
+      "score": 69.0,
+      "reason": "normalized substring; shared tokens: dim, item, master"
+    },
+    {
+      "path": "models/9_optimized_compiled_sql/minus_wip_valuation_conv_oh__agg_yearly.sql",
+      "score": 56.0,
+      "reason": "shared tokens: agg, conv, minus, oh, valuation, wip, yearly"
+    },
+    {
+      "path": "models/9_optimized_compiled_sql/minus_wip_valuation_conv_oh__scf__agg_monthly.sql",
+      "score": 56.0,
+      "reason": "shared tokens: agg, conv, minus, monthly, oh, valuation, wip"
+    },
+    {
+      "path": "models/4_marts/agg/agg_wip_valuation_conv_oh_monthly.sql",
+      "score": 48.0,
+      "reason": "shared tokens: agg, conv, monthly, oh, valuation, wip"
+    },
+    {
+      "path": "models/4_marts/agg/agg_wip_valuation_conv_oh_yearly.sql",
+      "score": 48.0,
+      "reason": "shared tokens: agg, conv, oh, valuation, wip, yearly"
+    },
+    {
+      "path": "models/9_optimized_compiled_sql/minus_wip_valuation_conv_oh__agg_ytd.sql",
+      "score": 48.0,
+      "reason": "shared tokens: agg, conv, minus, oh, valuation, wip"
+    }
+  ]
+}

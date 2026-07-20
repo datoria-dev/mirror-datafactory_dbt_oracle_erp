@@ -1,0 +1,559 @@
+version: 2
+
+models:
+  - name: actuals_build
+    description: "Mart for actuals build, supporting actual production, build, and delivery reporting."
+    config:
+      meta:
+        owner: DataFactory
+        layer: marts
+        mart_type: marts
+  - name: actuals_build_delivery
+    description: "Mart for actuals build delivery, supporting actual production, build, and delivery reporting."
+    config:
+      meta:
+        owner: DataFactory
+        layer: marts
+        mart_type: marts
+  - name: actuals_delivery
+    description: "Mart for actuals delivery, supporting actual production, build, and delivery reporting."
+    config:
+      meta:
+        owner: DataFactory
+        layer: marts
+        mart_type: marts
+  - name: agg_lead_time_analysis_median
+    description: "Aggregated mart for agg lead time analysis median, designed for faster reporting and summary-level dashboard use."
+    config:
+      meta:
+        owner: DataFactory
+        layer: marts
+        mart_type: aggregates
+  - name: agg_lead_time_analysis_percent_complete
+    description: "Aggregated mart for agg lead time analysis percent complete, designed for faster reporting and summary-level dashboard use."
+    config:
+      meta:
+        owner: DataFactory
+        layer: marts
+        mart_type: aggregates
+  - name: agg_wip_valuation_conv_oh_monthly
+    description: "Aggregated mart for agg wip valuation conv oh monthly, designed for faster reporting and summary-level dashboard use."
+    config:
+      meta:
+        owner: DataFactory
+        layer: marts
+        mart_type: aggregates
+  - name: agg_wip_valuation_conv_oh_yearly
+    description: "Aggregated mart for agg wip valuation conv oh yearly, designed for faster reporting and summary-level dashboard use."
+    config:
+      meta:
+        owner: DataFactory
+        layer: marts
+        mart_type: aggregates
+  - name: build2plan
+    description: "Business-ready marts layer model for build2plan reporting and downstream analytics."
+    config:
+      meta:
+        owner: DataFactory
+        layer: marts
+        mart_type: marts
+  - name: densify_fiscal_item_master
+    description: "Date mart for densify fiscal item master, aligning fiscal calendar logic with operational reporting windows."
+    config:
+      meta:
+        owner: DataFactory
+        layer: marts
+        mart_type: marts
+  - name: dim_bill_of_materials_and_reference_designators
+    description: "BOM and reference designator dimension for component structure and engineering traceability."
+    config:
+      meta:
+        owner: DataFactory
+        layer: marts
+        mart_type: dimensions
+  - name: dim_bom_routings_and_operations
+    description: "BOM routing and operation dimension for standard manufacturing process analysis."
+    config:
+      meta:
+        owner: DataFactory
+        layer: marts
+        mart_type: dimensions
+  - name: dim_dates
+    description: "Calendar date dimension used to standardize date filtering, grouping, and reporting across marts."
+    config:
+      meta:
+        owner: DataFactory
+        layer: marts
+        mart_type: dimensions
+  - name: dim_departments
+    description: "Department dimension for routing, operation, WIP, and manufacturing responsibility analysis."
+    config:
+      meta:
+        owner: DataFactory
+        layer: marts
+        mart_type: dimensions
+  - name: dim_fiscal_and_calendar_dates
+    description: "Combined fiscal and calendar date dimension for aligning Oracle activity to business reporting periods."
+    config:
+      meta:
+        owner: DataFactory
+        layer: marts
+        mart_type: dimensions
+  - name: dim_item_master
+    description: "Conformed item master dimension for part numbers, item attributes, planning context, and program-level analysis."
+    config:
+      meta:
+        owner: DataFactory
+        layer: marts
+        mart_type: dimensions
+    columns:
+      - name: item_master_sk
+        description: "Primary grain or uniqueness key for dim_item_master."
+        data_tests:
+          - unique
+  - name: dim_operation_descriptions
+    description: "Operation description reference dimension for readable routing and WIP step reporting."
+    config:
+      meta:
+        owner: DataFactory
+        layer: marts
+        mart_type: dimensions
+  - name: dim_quality_defect_details_and_results_recording
+    description: "Quality defect detail dimension joined to results recording for defect classification and inspection context."
+    config:
+      meta:
+        owner: DataFactory
+        layer: marts
+        mart_type: dimensions
+  - name: dim_quality_defect_details_as_child
+    description: "Quality defect child-detail dimension for parent-child defect and result relationships."
+    config:
+      meta:
+        owner: DataFactory
+        layer: marts
+        mart_type: dimensions
+  - name: dim_quality_plans_and_columns
+    description: "Quality plan and characteristic dimension describing inspection plans, fields, and result capture structure."
+    config:
+      meta:
+        owner: DataFactory
+        layer: marts
+        mart_type: dimensions
+  - name: dim_quality_serialized_results_recording
+    description: "Serialized quality results dimension for inspection outcomes tied to serial-controlled parts."
+    config:
+      meta:
+        owner: DataFactory
+        layer: marts
+        mart_type: dimensions
+  - name: dim_serial_numbers
+    description: "Serial number dimension for tracing serialized inventory, WIP activity, and quality outcomes."
+    config:
+      meta:
+        owner: DataFactory
+        layer: marts
+        mart_type: dimensions
+  - name: dim_users
+    description: "Oracle application user dimension for attributing transactions, actions, and operational activity."
+    config:
+      meta:
+        owner: DataFactory
+        layer: marts
+        mart_type: dimensions
+  - name: dim_wip_jobs
+    description: "WIP job dimension describing discrete jobs, statuses, assemblies, quantities, and production context."
+    config:
+      meta:
+        owner: DataFactory
+        layer: marts
+        mart_type: dimensions
+  - name: dim_wip_jobs_and_operations
+    description: "WIP job and operation dimension for analyzing jobs at routing-operation grain."
+    config:
+      meta:
+        owner: DataFactory
+        layer: marts
+        mart_type: dimensions
+  - name: dim_wip_jobs_batch_completions
+    description: "Batch completion dimension for grouping WIP job completions into production batches."
+    config:
+      meta:
+        owner: DataFactory
+        layer: marts
+        mart_type: dimensions
+  - name: dim_wip_jobs_completions
+    description: "Completion-focused WIP job dimension for assembly completion and throughput reporting."
+    config:
+      meta:
+        owner: DataFactory
+        layer: marts
+        mart_type: dimensions
+  - name: dim_wip_reservations_on_sales_orders
+    description: "Dimension linking WIP reservations to sales order demand and supply signals."
+    config:
+      meta:
+        owner: DataFactory
+        layer: marts
+        mart_type: dimensions
+    columns:
+      - name: mr_demand_source_header_id
+        description: "Primary grain or uniqueness key for dim_wip_reservations_on_sales_orders."
+        data_tests:
+          - unique
+      - name: mr_supply_source_header_id
+        description: "Primary grain or uniqueness key for dim_wip_reservations_on_sales_orders."
+        data_tests:
+          - unique
+  - name: employee_wip_moves_14days
+    description: "WIP mart for employee wip moves 14days, supporting production status, movement, quality, valuation, and open-quantity reporting."
+    config:
+      meta:
+        owner: DataFactory
+        layer: marts
+        mart_type: marts
+  - name: employee_wip_moves_365days
+    description: "WIP mart for employee wip moves 365days, supporting production status, movement, quality, valuation, and open-quantity reporting."
+    config:
+      meta:
+        owner: DataFactory
+        layer: marts
+        mart_type: marts
+  - name: fct_component_material_transactions
+    description: "Component material transaction fact for BOM component usage, issue activity, and WIP consumption analysis."
+    config:
+      meta:
+        owner: DataFactory
+        layer: marts
+        mart_type: facts
+  - name: fct_inspection_escapes_day
+    description: "Daily fact for inspection escapes and quality containment monitoring."
+    config:
+      meta:
+        owner: DataFactory
+        layer: marts
+        mart_type: facts
+  - name: fct_inspection_escapes_day_emp
+    description: "Daily employee-grain fact for inspection escapes and quality accountability analysis."
+    config:
+      meta:
+        owner: DataFactory
+        layer: marts
+        mart_type: facts
+  - name: fct_lead_time_analysis
+    description: "Lead-time fact for measuring elapsed time across WIP, routing, and completion milestones."
+    config:
+      meta:
+        owner: DataFactory
+        layer: marts
+        mart_type: facts
+  - name: fct_on_hand_qty_per_subinventory_per_item
+    description: "Inventory fact summarizing on-hand quantity by item and subinventory."
+    config:
+      meta:
+        owner: DataFactory
+        layer: marts
+        mart_type: facts
+  - name: fct_supplier_caused_defects
+    description: "Quality fact attributing defects to suppliers for supplier performance and corrective-action analysis."
+    config:
+      meta:
+        owner: DataFactory
+        layer: marts
+        mart_type: facts
+  - name: fct_wip_accounting
+    description: "Fact table for WIP accounting transactions, valuation, and cost movement analysis."
+    config:
+      meta:
+        owner: DataFactory
+        layer: marts
+        mart_type: facts
+  - name: fct_wip_assembly_completions
+    description: "Fact table for assembly completions by WIP job, item, transaction date, and production context."
+    config:
+      meta:
+        owner: DataFactory
+        layer: marts
+        mart_type: facts
+  - name: fct_wip_job_batch_completions
+    description: "Fact table for WIP batch completion activity and batch-level production measurement."
+    config:
+      meta:
+        owner: DataFactory
+        layer: marts
+        mart_type: facts
+  - name: fct_wip_jobs
+    description: "Fact table for WIP job status, quantities, dates, and manufacturing execution metrics."
+    config:
+      meta:
+        owner: DataFactory
+        layer: marts
+        mart_type: facts
+    columns:
+      - name: wip_job_sk
+        description: "Primary grain or uniqueness key for fct_wip_jobs."
+        data_tests:
+          - unique
+  - name: fct_wip_move_trxns_day_emp
+    description: "Daily employee-grain fact for WIP move transaction productivity and operation movement."
+    config:
+      meta:
+        owner: DataFactory
+        layer: marts
+        mart_type: facts
+  - name: fct_wip_move_trxns_month_emp
+    description: "Monthly employee-grain fact for WIP move transaction productivity trends."
+    config:
+      meta:
+        owner: DataFactory
+        layer: marts
+        mart_type: facts
+  - name: fiscal_calendar_30days
+    description: "Date mart for fiscal calendar 30days, aligning fiscal calendar logic with operational reporting windows."
+    config:
+      meta:
+        owner: DataFactory
+        layer: marts
+        mart_type: marts
+  - name: fiscal_calendar_365days
+    description: "Date mart for fiscal calendar 365days, aligning fiscal calendar logic with operational reporting windows."
+    config:
+      meta:
+        owner: DataFactory
+        layer: marts
+        mart_type: marts
+  - name: fiscal_calendar_365days_rollover_sat_sun
+    description: "Date mart for fiscal calendar 365days rollover sat sun, aligning fiscal calendar logic with operational reporting windows."
+    config:
+      meta:
+        owner: DataFactory
+        layer: marts
+        mart_type: marts
+  - name: fiscal_calendar_current_year_365days
+    description: "Date mart for fiscal calendar current year 365days, aligning fiscal calendar logic with operational reporting windows."
+    config:
+      meta:
+        owner: DataFactory
+        layer: marts
+        mart_type: marts
+  - name: horizontal_wip
+    description: "WIP mart for horizontal wip, supporting production status, movement, quality, valuation, and open-quantity reporting."
+    config:
+      meta:
+        owner: DataFactory
+        layer: marts
+        mart_type: marts
+  - name: horizontal_wip_agg_qty_to_move
+    description: "WIP mart for horizontal wip agg qty to move, supporting production status, movement, quality, valuation, and open-quantity reporting."
+    config:
+      meta:
+        owner: DataFactory
+        layer: marts
+        mart_type: marts
+  - name: horizontal_wip_qty_in_queue_gt_0
+    description: "WIP mart for horizontal wip qty in queue gt 0, supporting production status, movement, quality, valuation, and open-quantity reporting."
+    config:
+      meta:
+        owner: DataFactory
+        layer: marts
+        mart_type: marts
+  - name: inspections_only_wip_moves
+    description: "WIP mart for inspections only wip moves, supporting production status, movement, quality, valuation, and open-quantity reporting."
+    config:
+      meta:
+        owner: DataFactory
+        layer: marts
+        mart_type: marts
+  - name: item_program_details
+    description: "Business-ready marts layer model for item program details reporting and downstream analytics."
+    config:
+      meta:
+        owner: DataFactory
+        layer: marts
+        mart_type: marts
+  - name: lead_times_analysis_final
+    description: "Lead-time analysis mart for lead times analysis final, measuring production cycle time across calendar and working-day variants."
+    config:
+      meta:
+        owner: DataFactory
+        layer: marts
+        mart_type: marts
+    columns:
+      - name: wip_assembly_completions_sk
+        description: "Primary grain or uniqueness key for lead_times_analysis_final."
+        data_tests:
+          - unique
+  - name: lead_times_analysis_full7day_week
+    description: "Lead-time analysis mart for lead times analysis full7day week, measuring production cycle time across calendar and working-day variants."
+    config:
+      meta:
+        owner: DataFactory
+        layer: marts
+        mart_type: marts
+    columns:
+      - name: wip_assembly_completions_sk
+        description: "Primary grain or uniqueness key for lead_times_analysis_full7day_week."
+        data_tests:
+          - unique
+  - name: lead_times_analysis_workingdays_week
+    description: "Lead-time analysis mart for lead times analysis workingdays week, measuring production cycle time across calendar and working-day variants."
+    config:
+      meta:
+        owner: DataFactory
+        layer: marts
+        mart_type: marts
+    columns:
+      - name: wip_assembly_completions_sk
+        description: "Primary grain or uniqueness key for lead_times_analysis_workingdays_week."
+        data_tests:
+          - unique
+  - name: move_trxns_dynamic_daily_rate
+    description: "Move transaction mart for move trxns dynamic daily rate, supporting daily rate, operation movement, and shop-floor throughput reporting."
+    config:
+      meta:
+        owner: DataFactory
+        layer: marts
+        mart_type: marts
+  - name: move_trxns_dynamic_daily_rate_part_2
+    description: "Move transaction mart for move trxns dynamic daily rate part 2, supporting daily rate, operation movement, and shop-floor throughput reporting."
+    config:
+      meta:
+        owner: DataFactory
+        layer: marts
+        mart_type: marts
+  - name: mrp_monthly_build
+    description: "MRP planning mart for mrp monthly build, supporting build, delivery, and planning snapshot analysis."
+    config:
+      meta:
+        owner: DataFactory
+        layer: marts
+        mart_type: marts
+  - name: mrp_monthly_build_delivery
+    description: "MRP planning mart for mrp monthly build delivery, supporting build, delivery, and planning snapshot analysis."
+    config:
+      meta:
+        owner: DataFactory
+        layer: marts
+        mart_type: marts
+  - name: mrp_monthly_delivery
+    description: "MRP planning mart for mrp monthly delivery, supporting build, delivery, and planning snapshot analysis."
+    config:
+      meta:
+        owner: DataFactory
+        layer: marts
+        mart_type: marts
+  - name: saasm_for_top_level_sales_planned_qtys
+    description: "SAASM program mart for saasm for top level sales planned qtys, connecting sales, VMI, planned quantities, and material movement."
+    config:
+      meta:
+        owner: DataFactory
+        layer: marts
+        mart_type: marts
+    columns:
+      - name: stg_oeh_oel_sk
+        description: "Primary grain or uniqueness key for saasm_for_top_level_sales_planned_qtys."
+        data_tests:
+          - unique
+      - name: stg_oeh_oel_sk2
+        description: "Primary grain or uniqueness key for saasm_for_top_level_sales_planned_qtys."
+        data_tests:
+          - unique
+  - name: saasm_from_vmi_sales_planned_qtys
+    description: "SAASM program mart for saasm from vmi sales planned qtys, connecting sales, VMI, planned quantities, and material movement."
+    config:
+      meta:
+        owner: DataFactory
+        layer: marts
+        mart_type: marts
+    columns:
+      - name: stg_oeh_oel_sk
+        description: "Primary grain or uniqueness key for saasm_from_vmi_sales_planned_qtys."
+        data_tests:
+          - unique
+      - name: stg_oeh_oel_sk2
+        description: "Primary grain or uniqueness key for saasm_from_vmi_sales_planned_qtys."
+        data_tests:
+          - unique
+  - name: saasm_top_level_material_trxns_actual_qtys
+    description: "SAASM program mart for saasm top level material trxns actual qtys, connecting sales, VMI, planned quantities, and material movement."
+    config:
+      meta:
+        owner: DataFactory
+        layer: marts
+        mart_type: marts
+  - name: saasm_vmi
+    description: "SAASM program mart for saasm vmi, connecting sales, VMI, planned quantities, and material movement."
+    config:
+      meta:
+        owner: DataFactory
+        layer: marts
+        mart_type: marts
+  - name: scf_wdj_item_id_fiscal_monthly
+    description: "Scaffolding mart for scf wdj item id fiscal monthly, used to densify reporting grain and support complete time/item coverage."
+    config:
+      meta:
+        owner: DataFactory
+        layer: marts
+        mart_type: scaffolding
+  - name: scf_wt_item_id_unit_cost_rate_fiscal_monthly
+    description: "Scaffolding mart for scf wt item id unit cost rate fiscal monthly, used to densify reporting grain and support complete time/item coverage."
+    config:
+      meta:
+        owner: DataFactory
+        layer: marts
+        mart_type: scaffolding
+  - name: supplier_caused_defects
+    description: "Supplier quality mart for supplier caused defects, focused on defect attribution, daily metrics, and manufacturing-caused quality signals."
+    config:
+      meta:
+        owner: DataFactory
+        layer: marts
+        mart_type: marts
+  - name: supplier_caused_defects__wip
+    description: "Supplier quality mart for supplier caused defects  wip, focused on defect attribution, daily metrics, and manufacturing-caused quality signals."
+    config:
+      meta:
+        owner: DataFactory
+        layer: marts
+        mart_type: marts
+  - name: supplier_defects_metric_daily
+    description: "Supplier quality mart for supplier defects metric daily, focused on defect attribution, daily metrics, and manufacturing-caused quality signals."
+    config:
+      meta:
+        owner: DataFactory
+        layer: marts
+        mart_type: marts
+  - name: wip_monthly_snapshot
+    description: "WIP mart for wip monthly snapshot, supporting production status, movement, quality, valuation, and open-quantity reporting."
+    config:
+      meta:
+        owner: DataFactory
+        layer: marts
+        mart_type: marts
+  - name: wip_open_qtys_date_last_moved
+    description: "WIP mart for wip open qtys date last moved, supporting production status, movement, quality, valuation, and open-quantity reporting."
+    config:
+      meta:
+        owner: DataFactory
+        layer: marts
+        mart_type: marts
+  - name: wip_quality_summary_quality
+    description: "WIP mart for wip quality summary quality, supporting production status, movement, quality, valuation, and open-quantity reporting."
+    config:
+      meta:
+        owner: DataFactory
+        layer: marts
+        mart_type: marts
+  - name: wip_quality_summary_wip
+    description: "WIP mart for wip quality summary wip, supporting production status, movement, quality, valuation, and open-quantity reporting."
+    config:
+      meta:
+        owner: DataFactory
+        layer: marts
+        mart_type: marts
+  - name: wip_valuation_conv_oh
+    description: "WIP mart for wip valuation conv oh, supporting production status, movement, quality, valuation, and open-quantity reporting."
+    config:
+      meta:
+        owner: DataFactory
+        layer: marts
+        mart_type: marts

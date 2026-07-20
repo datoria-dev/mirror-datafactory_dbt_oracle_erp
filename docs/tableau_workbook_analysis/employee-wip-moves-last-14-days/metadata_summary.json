@@ -1,0 +1,66 @@
+{
+  "source_workbook": "tableau/my-tableau-dashboards/Employee WIP Moves Last 14 Days.twbx",
+  "embedded_twb": "Employee WIP Moves Last 14 Days_3.twb",
+  "primary_dashboard": "Employee WIP Moves Report",
+  "dashboards": [
+    "Employee WIP Moves Report"
+  ],
+  "worksheet_count": 4,
+  "datasource_count": 2,
+  "calculated_field_count": 5,
+  "lod_calculation_count": 0,
+  "table_calculation_count": 0,
+  "screenshot": "docs/tableau_workbook_analysis/employee-wip-moves-last-14-days/Employee-WIP-Moves-Report.jpeg",
+  "likely_lineage_matches": [
+    {
+      "path": "models/4_marts/employee_wip_moves_14days.sql",
+      "score": 132.0,
+      "reason": "exact normalized name; shared tokens: 14days, employee, moves, wip"
+    },
+    {
+      "path": "models/3_intermediate/int_employee_wip_moves_14days.sql",
+      "score": 77.0,
+      "reason": "normalized substring; shared tokens: 14days, employee, moves, wip"
+    },
+    {
+      "path": "models/99_oracle_sql_dev/dev_employee_wip_moves_14days.sql",
+      "score": 77.0,
+      "reason": "normalized substring; shared tokens: 14days, employee, moves, wip"
+    },
+    {
+      "path": "models/9_optimized_compiled_sql/minus_employee_wip_moves_14days.sql",
+      "score": 77.0,
+      "reason": "normalized substring; shared tokens: 14days, employee, moves, wip"
+    },
+    {
+      "path": "knowledgebase/tableau/Employee_WIP_Moves_Last_365_Days_tableau_data_catalog_lineage.md",
+      "score": 40.0,
+      "reason": "shared tokens: days, employee, last, moves, wip"
+    },
+    {
+      "path": "models/3_intermediate/int_employee_wip_moves_365days.sql",
+      "score": 24.0,
+      "reason": "shared tokens: employee, moves, wip"
+    },
+    {
+      "path": "models/4_marts/employee_wip_moves_365days.sql",
+      "score": 24.0,
+      "reason": "shared tokens: employee, moves, wip"
+    },
+    {
+      "path": "models/9_optimized_compiled_sql/minus_employee_wip_moves_alltime.sql",
+      "score": 24.0,
+      "reason": "shared tokens: employee, moves, wip"
+    },
+    {
+      "path": "models/1_sources/wip/src_wip_move_transactions_14days.sql",
+      "score": 16.0,
+      "reason": "shared tokens: 14days, wip"
+    },
+    {
+      "path": "models/4_marts/inspections_only_wip_moves.sql",
+      "score": 16.0,
+      "reason": "shared tokens: moves, wip"
+    }
+  ]
+}

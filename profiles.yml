@@ -1,0 +1,17 @@
+# dbt profile for the DataFactory Oracle development environment.
+# Keep credentials out of source control: set DBT_ORACLE_PASSWORD locally or in CI.
+
+datafactory:
+  outputs:
+    dev:
+      database: "{{ env_var('DBT_ORACLE_DATABASE', 'USCEBSDG.WORLD') }}"
+      host: "{{ env_var('DBT_ORACLE_HOST', 'nbnaexaracpr04') }}"
+      password: "{{ env_var('DBT_ORACLE_PASSWORD') }}"
+      port: "{{ env_var('DBT_ORACLE_PORT', '1521') | int }}"
+      protocol: tcp
+      schema: "{{ env_var('DBT_ORACLE_SCHEMA', 'apps') }}"
+      service: "{{ env_var('DBT_ORACLE_SERVICE', 'uscebspr') }}"
+      threads: 4
+      type: oracle
+      user: "{{ env_var('DBT_ORACLE_USER', 'USC_EBS_OPS_SVC') }}"
+  target: dev

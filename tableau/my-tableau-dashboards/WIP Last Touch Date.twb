@@ -1,0 +1,918 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20251.26.0403.1044                               -->
+<workbook original-version='18.1' source-build='2024.2.5 (20242.24.1112.0335)' source-platform='win' version='18.1' xml:base='https://tableauanalytics.us.baesystems.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <ISO8601DefaultCalendarPref />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <WindowsPersistSimpleIdentifiers />
+    <ZoneBackgroundTransparency />
+  </document-format-change-manifest>
+  <repository-location derived-from='https://tableauanalytics.us.baesystems.com/t/ES/workbooks/WIPLastTouchDate?rev=1.1' id='WIPLastTouchDate' path='/t/ES/workbooks' revision='1.1' site='ES' />
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <style-theme name='modern' />
+  <datasources>
+    <datasource caption='wip_open_qtys_date_last_moved' inline='true' name='sqlproxy.1sbl1sn0o465mq1ctzzmw0doz1bb' version='18.1'>
+      <repository-location derived-from='https://tableauanalytics.us.baesystems.com/t/ES/datasources/wip_open_qtys_date_last_moved?rev=1.0' id='wip_open_qtys_date_last_moved' path='/t/ES/datasources' revision='1.1' site='ES' />
+      <connection channel='https' class='sqlproxy' dbname='wip_open_qtys_date_last_moved' directory='/dataserver' port='443' server='tableauanalytics.us.baesystems.com' server-oauth='' username='' workgroup-auth-mode='prompt'>
+        <relation name='sqlproxy' table='[sqlproxy]' type='table' />
+        <metadata-records>
+          <metadata-record class='measure'>
+            <remote-name>Fm Op Qty Completed</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Fm Op Qty Completed]</local-name>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias>Fm Op Qty Completed</remote-alias>
+            <ordinal>10</ordinal>
+            <layered>true</layered>
+            <family>federated.0v2nuc30csl20g1d9ugv80tp5nua</family>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='field-type'>0</attribute>
+            </attributes>
+            <object-id>[_48086BAC1A8F40D4AAEF3D3CD6BDB4FD]</object-id>
+          </metadata-record>
+          <metadata-record class='measure'>
+            <remote-name>Fm Op Qty in Queue</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Fm Op Qty in Queue]</local-name>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias>Fm Op Qty in Queue</remote-alias>
+            <ordinal>7</ordinal>
+            <layered>true</layered>
+            <family>federated.0v2nuc30csl20g1d9ugv80tp5nua</family>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='field-type'>0</attribute>
+            </attributes>
+            <object-id>[_48086BAC1A8F40D4AAEF3D3CD6BDB4FD]</object-id>
+          </metadata-record>
+          <metadata-record class='measure'>
+            <remote-name>Fm Op Scheduled Qty</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Fm Op Scheduled Qty]</local-name>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias>Fm Op Scheduled Qty</remote-alias>
+            <ordinal>9</ordinal>
+            <layered>true</layered>
+            <family>federated.0v2nuc30csl20g1d9ugv80tp5nua</family>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='field-type'>0</attribute>
+            </attributes>
+            <object-id>[_48086BAC1A8F40D4AAEF3D3CD6BDB4FD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Fm Op Step</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Fm Op Step]</local-name>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias>Fm Op Step</remote-alias>
+            <ordinal>12</ordinal>
+            <layered>true</layered>
+            <family>federated.0v2nuc30csl20g1d9ugv80tp5nua</family>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='integer' name='field-type'>2</attribute>
+              <attribute datatype='integer' name='role'>0</attribute>
+            </attributes>
+            <object-id>[_48086BAC1A8F40D4AAEF3D3CD6BDB4FD]</object-id>
+          </metadata-record>
+          <metadata-record class='measure'>
+            <remote-name>Fm Op To Move Qty</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Fm Op To Move Qty]</local-name>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias>Fm Op To Move Qty</remote-alias>
+            <ordinal>8</ordinal>
+            <layered>true</layered>
+            <family>federated.0v2nuc30csl20g1d9ugv80tp5nua</family>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='field-type'>0</attribute>
+            </attributes>
+            <object-id>[_48086BAC1A8F40D4AAEF3D3CD6BDB4FD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>From Op Desc</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[From Op Desc]</local-name>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias>From Op Desc</remote-alias>
+            <ordinal>14</ordinal>
+            <layered>true</layered>
+            <family>federated.0v2nuc30csl20g1d9ugv80tp5nua</family>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='integer' name='field-type'>2</attribute>
+              <attribute datatype='integer' name='role'>0</attribute>
+            </attributes>
+            <object-id>[_48086BAC1A8F40D4AAEF3D3CD6BDB4FD]</object-id>
+          </metadata-record>
+          <metadata-record class='measure'>
+            <remote-name>From Op Seq Num</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[From Op Seq Num]</local-name>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias>From Op Seq Num</remote-alias>
+            <ordinal>13</ordinal>
+            <layered>true</layered>
+            <family>federated.0v2nuc30csl20g1d9ugv80tp5nua</family>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='field-type'>0</attribute>
+            </attributes>
+            <object-id>[_48086BAC1A8F40D4AAEF3D3CD6BDB4FD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Job Number</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Job Number]</local-name>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias>Job Number</remote-alias>
+            <ordinal>6</ordinal>
+            <layered>true</layered>
+            <family>federated.0v2nuc30csl20g1d9ugv80tp5nua</family>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='integer' name='field-type'>2</attribute>
+              <attribute datatype='integer' name='role'>0</attribute>
+            </attributes>
+            <object-id>[_48086BAC1A8F40D4AAEF3D3CD6BDB4FD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Job Scheduled Completion Date</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[Job Scheduled Completion Date]</local-name>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias>Job Scheduled Completion Date</remote-alias>
+            <ordinal>3</ordinal>
+            <layered>true</layered>
+            <family>federated.0v2nuc30csl20g1d9ugv80tp5nua</family>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='field-type'>1</attribute>
+              <attribute datatype='integer' name='role'>0</attribute>
+            </attributes>
+            <object-id>[_48086BAC1A8F40D4AAEF3D3CD6BDB4FD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Job Scheduled Start Date</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[Job Scheduled Start Date]</local-name>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias>Job Scheduled Start Date</remote-alias>
+            <ordinal>2</ordinal>
+            <layered>true</layered>
+            <family>federated.0v2nuc30csl20g1d9ugv80tp5nua</family>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='field-type'>1</attribute>
+              <attribute datatype='integer' name='role'>0</attribute>
+            </attributes>
+            <object-id>[_48086BAC1A8F40D4AAEF3D3CD6BDB4FD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Last Touch Date</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[Last Touch Date]</local-name>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias>Last Touch Date</remote-alias>
+            <ordinal>15</ordinal>
+            <layered>true</layered>
+            <family>federated.0v2nuc30csl20g1d9ugv80tp5nua</family>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='field-type'>1</attribute>
+              <attribute datatype='integer' name='role'>0</attribute>
+            </attributes>
+            <object-id>[_48086BAC1A8F40D4AAEF3D3CD6BDB4FD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Part Number Desc</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Part Number Desc]</local-name>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias>Part Number Desc</remote-alias>
+            <ordinal>4</ordinal>
+            <layered>true</layered>
+            <family>federated.0v2nuc30csl20g1d9ugv80tp5nua</family>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='integer' name='field-type'>2</attribute>
+              <attribute datatype='integer' name='role'>0</attribute>
+            </attributes>
+            <object-id>[_48086BAC1A8F40D4AAEF3D3CD6BDB4FD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Part Number</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Part Number]</local-name>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias>Part Number</remote-alias>
+            <ordinal>1</ordinal>
+            <layered>true</layered>
+            <family>federated.0v2nuc30csl20g1d9ugv80tp5nua</family>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='integer' name='field-type'>2</attribute>
+              <attribute datatype='integer' name='role'>0</attribute>
+            </attributes>
+            <object-id>[_48086BAC1A8F40D4AAEF3D3CD6BDB4FD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Planner</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Planner]</local-name>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias>Planner</remote-alias>
+            <ordinal>0</ordinal>
+            <layered>true</layered>
+            <family>federated.0v2nuc30csl20g1d9ugv80tp5nua</family>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='integer' name='field-type'>2</attribute>
+              <attribute datatype='integer' name='role'>0</attribute>
+            </attributes>
+            <object-id>[_48086BAC1A8F40D4AAEF3D3CD6BDB4FD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>WIP Job Status</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[WIP Job Status]</local-name>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias>WIP Job Status</remote-alias>
+            <ordinal>5</ordinal>
+            <layered>true</layered>
+            <family>federated.0v2nuc30csl20g1d9ugv80tp5nua</family>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='integer' name='field-type'>2</attribute>
+              <attribute datatype='integer' name='role'>0</attribute>
+            </attributes>
+            <object-id>[_48086BAC1A8F40D4AAEF3D3CD6BDB4FD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>wdj_class_code</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[wdj_class_code]</local-name>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias>wdj_class_code</remote-alias>
+            <ordinal>11</ordinal>
+            <layered>true</layered>
+            <family>federated.0v2nuc30csl20g1d9ugv80tp5nua</family>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='integer' name='field-type'>2</attribute>
+              <attribute datatype='integer' name='role'>0</attribute>
+            </attributes>
+            <object-id>[_48086BAC1A8F40D4AAEF3D3CD6BDB4FD]</object-id>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='boolean' name='CAP_CREATE_TEMP_TABLES'>true</attribute>
+              <attribute datatype='boolean' name='CAP_QUERY_BLENDING_ALWAYS_USE_LOCAL_MAPPING_TABLES'>false</attribute>
+              <attribute datatype='boolean' name='CAP_QUERY_BLENDING_PREFER_LOCAL_MAPPING_TABLES'>true</attribute>
+              <attribute datatype='boolean' name='CAP_QUERY_BLENDING_REMOTE_MAPPING_TABLES'>true</attribute>
+              <attribute datatype='boolean' name='CAP_QUERY_CASE_INSENSITIVE_CONTAINS'>true</attribute>
+              <attribute datatype='boolean' name='CAP_QUERY_IGNORE_HINT_CHECK_NOT_NULL'>true</attribute>
+              <attribute datatype='boolean' name='CAP_QUERY_SORT_BY'>true</attribute>
+              <attribute datatype='boolean' name='CAP_QUERY_SUBQUERIES'>true</attribute>
+              <attribute datatype='boolean' name='CAP_QUERY_SUBQUERY_QUERY_CONTEXT'>true</attribute>
+              <attribute datatype='boolean' name='CAP_QUERY_SUPPORTS_LODJOINS'>true</attribute>
+              <attribute datatype='boolean' name='CAP_QUERY_SUPPORT_ANALYTIC_FUNCTIONS'>true</attribute>
+              <attribute datatype='boolean' name='CAP_QUERY_TOP_N'>true</attribute>
+              <attribute datatype='boolean' name='CAP_QUERY_USE_QUERY_FUSION'>true</attribute>
+              <attribute datatype='boolean' name='CAP_SUPPORTS_SPLIT_FROM_LEFT'>true</attribute>
+              <attribute datatype='boolean' name='CAP_SUPPORTS_SPLIT_FROM_RIGHT'>true</attribute>
+              <attribute datatype='integer' name='charset'>0</attribute>
+              <attribute datatype='string' name='collation'>&quot;binary&quot;</attribute>
+              <attribute datatype='string' name='datasource'>&quot;<![CDATA[<?xml version='1.0' encoding='utf-8' ?>
+
+<datasource :source-version='18.1' formatted-name='federated.0v2nuc30csl20g1d9ugv80tp5nua' inline='true' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+  </document-format-change-manifest>
+  <repository-location derived-from='/t/ES/datasources/wip_open_qtys_date_last_moved?rev=1.0' id='wip_open_qtys_date_last_moved' path='/t/ES/datasources' revision='1.1' site='ES' />
+  <connection channel='https' class='sqlproxy' dbname='wip_open_qtys_date_last_moved' directory='/dataserver' port='443' server='tableauanalytics.us.baesystems.com'>
+    <relation name='sqlproxy' table='[sqlproxy]' type='table' />
+    <cols>
+      <map key='[Fm Op Qty Completed]' value='[sqlproxy].[Fm Op Qty Completed]' />
+      <map key='[Fm Op Qty in Queue]' value='[sqlproxy].[Fm Op Qty in Queue]' />
+      <map key='[Fm Op Scheduled Qty]' value='[sqlproxy].[Fm Op Scheduled Qty]' />
+      <map key='[Fm Op Step]' value='[sqlproxy].[Fm Op Step]' />
+      <map key='[Fm Op To Move Qty]' value='[sqlproxy].[Fm Op To Move Qty]' />
+      <map key='[From Op Desc]' value='[sqlproxy].[From Op Desc]' />
+      <map key='[From Op Seq Num]' value='[sqlproxy].[From Op Seq Num]' />
+      <map key='[Job Number]' value='[sqlproxy].[Job Number]' />
+      <map key='[Job Scheduled Completion Date]' value='[sqlproxy].[Job Scheduled Completion Date]' />
+      <map key='[Job Scheduled Start Date]' value='[sqlproxy].[Job Scheduled Start Date]' />
+      <map key='[Last Touch Date]' value='[sqlproxy].[Last Touch Date]' />
+      <map key='[Part Number Desc]' value='[sqlproxy].[Part Number Desc]' />
+      <map key='[Part Number]' value='[sqlproxy].[Part Number]' />
+      <map key='[Planner]' value='[sqlproxy].[Planner]' />
+      <map key='[WIP Job Status]' value='[sqlproxy].[WIP Job Status]' />
+      <map key='[wdj_class_code]' value='[sqlproxy].[wdj_class_code]' />
+    </cols>
+  </connection>
+  <aliases enabled='yes' />
+  <column aggregation='Count' caption='wip_open_qtys_date_last_moved' datatype='table' default-type='quantitative' name='[__tableau_internal_object_id__].[_48086BAC1A8F40D4AAEF3D3CD6BDB4FD]' pivot='key' role='measure' type='quantitative' user-datatype='table' visual-totals='Default' />
+  <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+  <semantic-values>
+    <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+  </semantic-values>
+  <object-graph>
+    <objects>
+      <object caption='wip_open_qtys_date_last_moved' id='_48086BAC1A8F40D4AAEF3D3CD6BDB4FD'>
+        <properties context=''>
+          <relation name='sqlproxy' table='[sqlproxy]' type='table' />
+        </properties>
+      </object>
+    </objects>
+  </object-graph>
+</datasource>
+]]>&quot;</attribute>
+              <attribute datatype='string' name='dialect-definition'>&quot;<![CDATA[<dialect-definition>
+  <primary-dialect class='hyper' version='0.0.0'>
+  </primary-dialect>
+</dialect-definition>
+]]>&quot;</attribute>
+              <attribute datatype='boolean' name='extract-active'>true</attribute>
+              <attribute datatype='boolean' name='fast-get-server-time'>true</attribute>
+              <attribute datatype='string' name='update-time'>&quot;6/2/2025 12:02:39 PM&quot;</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <overridable-settings>
+        <date-options fiscal-year-start='january' start-of-week='sunday' />
+        <default-date-format />
+        <default-calendar-type>Gregorian</default-calendar-type>
+      </overridable-settings>
+      <aliases enabled='yes' />
+      <column aggregation='Sum' datatype='real' default-type='quantitative' layered='true' name='[Fm Op Qty Completed]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default' />
+      <column aggregation='Sum' datatype='real' default-type='quantitative' layered='true' name='[Fm Op Qty in Queue]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default' />
+      <column aggregation='Sum' datatype='real' default-type='quantitative' layered='true' name='[Fm Op Scheduled Qty]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default' />
+      <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[Fm Op Step]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+      <column aggregation='Sum' datatype='real' default-type='quantitative' layered='true' name='[Fm Op To Move Qty]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default' />
+      <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[From Op Desc]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+      <column aggregation='Sum' datatype='real' default-type='quantitative' layered='true' name='[From Op Seq Num]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default' />
+      <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[Job Number]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+      <column aggregation='Year' datatype='datetime' default-type='ordinal' layered='true' name='[Job Scheduled Completion Date]' pivot='key' role='dimension' type='ordinal' user-datatype='datetime' visual-totals='Default' />
+      <column aggregation='Year' datatype='datetime' default-type='ordinal' layered='true' name='[Job Scheduled Start Date]' pivot='key' role='dimension' type='ordinal' user-datatype='datetime' visual-totals='Default' />
+      <column aggregation='Year' datatype='datetime' default-type='ordinal' layered='true' name='[Last Touch Date]' pivot='key' role='dimension' type='ordinal' user-datatype='datetime' visual-totals='Default' />
+      <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[Part Number Desc]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+      <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[Part Number]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+      <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[Planner]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+      <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[WIP Job Status]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+      <column aggregation='Count' caption='wip_open_qtys_date_last_moved' datatype='table' default-type='quantitative' layered='true' name='[__tableau_internal_object_id__].[_48086BAC1A8F40D4AAEF3D3CD6BDB4FD]' pivot='key' role='measure' type='quantitative' user-datatype='table' visual-totals='Default' />
+      <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[wdj_class_code]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='wip_open_qtys_date_last_moved' id='_48086BAC1A8F40D4AAEF3D3CD6BDB4FD'>
+            <properties context=''>
+              <relation name='sqlproxy' table='[sqlproxy]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Last Touch Date Data Details'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run><![CDATA[<Sheet Name> Refreshed At: <Data Update Time>]]></run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='wip_open_qtys_date_last_moved' name='sqlproxy.1sbl1sn0o465mq1ctzzmw0doz1bb' />
+          </datasources>
+          <datasource-dependencies datasource='sqlproxy.1sbl1sn0o465mq1ctzzmw0doz1bb'>
+            <column aggregation='Sum' datatype='real' default-type='quantitative' layered='true' name='[Fm Op Qty in Queue]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default' />
+            <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[Fm Op Step]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+            <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[Job Number]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+            <column aggregation='Year' datatype='datetime' default-type='ordinal' layered='true' name='[Job Scheduled Completion Date]' pivot='key' role='dimension' type='ordinal' user-datatype='datetime' visual-totals='Default' />
+            <column aggregation='Year' datatype='datetime' default-type='ordinal' layered='true' name='[Job Scheduled Start Date]' pivot='key' role='dimension' type='ordinal' user-datatype='datetime' visual-totals='Default' />
+            <column aggregation='Year' datatype='datetime' default-type='ordinal' layered='true' name='[Last Touch Date]' pivot='key' role='dimension' type='ordinal' user-datatype='datetime' visual-totals='Default' />
+            <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[Part Number]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+            <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[Planner]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+            <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[WIP Job Status]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+            <column-instance column='[Last Touch Date]' derivation='MY' name='[my:Last Touch Date:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Fm Op Step]' derivation='None' name='[none:Fm Op Step:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Job Number]' derivation='None' name='[none:Job Number:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Job Scheduled Completion Date]' derivation='None' name='[none:Job Scheduled Completion Date:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Job Scheduled Start Date]' derivation='None' name='[none:Job Scheduled Start Date:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Last Touch Date]' derivation='None' name='[none:Last Touch Date:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Part Number]' derivation='None' name='[none:Part Number:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Planner]' derivation='None' name='[none:Planner:nk]' pivot='key' type='nominal' />
+            <column-instance column='[WIP Job Status]' derivation='None' name='[none:WIP Job Status:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Fm Op Qty in Queue]' derivation='Sum' name='[sum:Fm Op Qty in Queue:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[sqlproxy.1sbl1sn0o465mq1ctzzmw0doz1bb].[:Measure Names]'>
+            <groupfilter function='member' level='[:Measure Names]' member='&quot;[sqlproxy.1sbl1sn0o465mq1ctzzmw0doz1bb].[sum:Fm Op Qty in Queue:qk]&quot;' user:op='manual' />
+          </filter>
+          <filter class='categorical' column='[sqlproxy.1sbl1sn0o465mq1ctzzmw0doz1bb].[my:Last Touch Date:ok]'>
+            <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+              <groupfilter function='member' level='[my:Last Touch Date:ok]' member='202406' />
+              <groupfilter function='member' level='[my:Last Touch Date:ok]' member='202407' />
+              <groupfilter function='member' level='[my:Last Touch Date:ok]' member='202408' />
+              <groupfilter function='member' level='[my:Last Touch Date:ok]' member='202409' />
+              <groupfilter function='member' level='[my:Last Touch Date:ok]' member='202410' />
+              <groupfilter function='member' level='[my:Last Touch Date:ok]' member='202411' />
+              <groupfilter function='member' level='[my:Last Touch Date:ok]' member='202412' />
+              <groupfilter function='member' level='[my:Last Touch Date:ok]' member='202501' />
+              <groupfilter function='member' level='[my:Last Touch Date:ok]' member='202502' />
+              <groupfilter function='member' level='[my:Last Touch Date:ok]' member='202503' />
+              <groupfilter function='member' level='[my:Last Touch Date:ok]' member='202504' />
+              <groupfilter function='member' level='[my:Last Touch Date:ok]' member='202505' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[sqlproxy.1sbl1sn0o465mq1ctzzmw0doz1bb].[none:Fm Op Step:nk]' filter-group='5'>
+            <groupfilter function='level-members' level='[none:Fm Op Step:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[sqlproxy.1sbl1sn0o465mq1ctzzmw0doz1bb].[none:Job Number:nk]'>
+            <groupfilter function='level-members' level='[none:Job Number:nk]' user:ui-manual-selection='true' user:ui-manual-selection-all-when-empty='true' user:ui-manual-selection-is-empty='true' user:ui-marker='enumerate' />
+          </filter>
+          <natural-sort column='[sqlproxy.1sbl1sn0o465mq1ctzzmw0doz1bb].[none:Last Touch Date:ok]' direction='ASC' />
+          <filter class='categorical' column='[sqlproxy.1sbl1sn0o465mq1ctzzmw0doz1bb].[none:Part Number:nk]' filter-group='3'>
+            <groupfilter function='level-members' level='[none:Part Number:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[sqlproxy.1sbl1sn0o465mq1ctzzmw0doz1bb].[none:Planner:nk]' filter-group='4'>
+            <groupfilter function='level-members' level='[none:Planner:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='quantitative' column='[sqlproxy.1sbl1sn0o465mq1ctzzmw0doz1bb].[sum:Fm Op Qty in Queue:qk]' included-values='in-range'>
+            <min>1.0</min>
+            <max>18002.0</max>
+          </filter>
+          <slices>
+            <column>[sqlproxy.1sbl1sn0o465mq1ctzzmw0doz1bb].[my:Last Touch Date:ok]</column>
+            <column>[sqlproxy.1sbl1sn0o465mq1ctzzmw0doz1bb].[none:Planner:nk]</column>
+            <column>[sqlproxy.1sbl1sn0o465mq1ctzzmw0doz1bb].[none:Part Number:nk]</column>
+            <column>[sqlproxy.1sbl1sn0o465mq1ctzzmw0doz1bb].[none:Fm Op Step:nk]</column>
+            <column>[sqlproxy.1sbl1sn0o465mq1ctzzmw0doz1bb].[none:Job Number:nk]</column>
+            <column>[sqlproxy.1sbl1sn0o465mq1ctzzmw0doz1bb].[:Measure Names]</column>
+            <column>[sqlproxy.1sbl1sn0o465mq1ctzzmw0doz1bb].[sum:Fm Op Qty in Queue:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[sqlproxy.1sbl1sn0o465mq1ctzzmw0doz1bb].[:Measure Names]' value='72' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='height' field='[sqlproxy.1sbl1sn0o465mq1ctzzmw0doz1bb].[:Measure Names]' value='68' />
+            <format attr='band-color' scope='rows' value='#f5eddc' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-orientation' field='[sqlproxy.1sbl1sn0o465mq1ctzzmw0doz1bb].[:Measure Names]' value='0' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='band-color' scope='rows' value='#f5eddc' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='band-size' scope='rows' value='1' />
+            <format attr='band-level' scope='rows' value='7' />
+          </style-rule>
+          <style-rule element='quick-filter'>
+            <format attr='title' field='[sqlproxy.1sbl1sn0o465mq1ctzzmw0doz1bb].[my:Last Touch Date:ok]' value=' Last Touch Date'>
+              <formatted-text>
+                <run> Last Touch Date</run>
+              </formatted-text>
+            </format>
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[sqlproxy.1sbl1sn0o465mq1ctzzmw0doz1bb].[Multiple Values]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([sqlproxy.1sbl1sn0o465mq1ctzzmw0doz1bb].[none:Last Touch Date:ok] / ([sqlproxy.1sbl1sn0o465mq1ctzzmw0doz1bb].[none:Planner:nk] / ([sqlproxy.1sbl1sn0o465mq1ctzzmw0doz1bb].[none:Part Number:nk] / ([sqlproxy.1sbl1sn0o465mq1ctzzmw0doz1bb].[none:Fm Op Step:nk] / ([sqlproxy.1sbl1sn0o465mq1ctzzmw0doz1bb].[none:WIP Job Status:nk] / ([sqlproxy.1sbl1sn0o465mq1ctzzmw0doz1bb].[none:Job Number:nk] / ([sqlproxy.1sbl1sn0o465mq1ctzzmw0doz1bb].[none:Job Scheduled Start Date:ok] / [sqlproxy.1sbl1sn0o465mq1ctzzmw0doz1bb].[none:Job Scheduled Completion Date:ok])))))))</rows>
+        <cols>[sqlproxy.1sbl1sn0o465mq1ctzzmw0doz1bb].[:Measure Names]</cols>
+      </table>
+      <simple-id uuid='{000DA094-0B57-4A4E-B0A9-9C190E3D3855}' />
+    </worksheet>
+    <worksheet name='Sum Op in Queue over Last Touch Date'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run><![CDATA[<Sheet Name> Refreshed At: <Data Update Time>]]></run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='wip_open_qtys_date_last_moved' name='sqlproxy.1sbl1sn0o465mq1ctzzmw0doz1bb' />
+          </datasources>
+          <datasource-dependencies datasource='sqlproxy.1sbl1sn0o465mq1ctzzmw0doz1bb'>
+            <column aggregation='Sum' datatype='real' default-type='quantitative' layered='true' name='[Fm Op Qty in Queue]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default' />
+            <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[Fm Op Step]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+            <column aggregation='Year' datatype='datetime' default-type='ordinal' layered='true' name='[Last Touch Date]' pivot='key' role='dimension' type='ordinal' user-datatype='datetime' visual-totals='Default' />
+            <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[Part Number]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+            <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[Planner]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+            <column-instance column='[Last Touch Date]' derivation='MY' name='[my:Last Touch Date:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Fm Op Step]' derivation='None' name='[none:Fm Op Step:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Part Number]' derivation='None' name='[none:Part Number:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Planner]' derivation='None' name='[none:Planner:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Fm Op Qty in Queue]' derivation='Sum' name='[sum:Fm Op Qty in Queue:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[sqlproxy.1sbl1sn0o465mq1ctzzmw0doz1bb].[my:Last Touch Date:ok]'>
+            <groupfilter function='except' user:ui-domain='database' user:ui-enumeration='exclusive' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[my:Last Touch Date:ok]' />
+              <groupfilter function='member' level='[my:Last Touch Date:ok]' member='%null%' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[sqlproxy.1sbl1sn0o465mq1ctzzmw0doz1bb].[none:Fm Op Step:nk]' filter-group='5'>
+            <groupfilter function='level-members' level='[none:Fm Op Step:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[sqlproxy.1sbl1sn0o465mq1ctzzmw0doz1bb].[none:Part Number:nk]' filter-group='3'>
+            <groupfilter function='level-members' level='[none:Part Number:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[sqlproxy.1sbl1sn0o465mq1ctzzmw0doz1bb].[none:Planner:nk]' filter-group='4'>
+            <groupfilter function='level-members' level='[none:Planner:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[sqlproxy.1sbl1sn0o465mq1ctzzmw0doz1bb].[my:Last Touch Date:ok]</column>
+            <column>[sqlproxy.1sbl1sn0o465mq1ctzzmw0doz1bb].[none:Part Number:nk]</column>
+            <column>[sqlproxy.1sbl1sn0o465mq1ctzzmw0doz1bb].[none:Planner:nk]</column>
+            <column>[sqlproxy.1sbl1sn0o465mq1ctzzmw0doz1bb].[none:Fm Op Step:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[sqlproxy.1sbl1sn0o465mq1ctzzmw0doz1bb].[sum:Fm Op Qty in Queue:qk]' field-type='quantitative' scale='log' scope='rows' type='space' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[sqlproxy.1sbl1sn0o465mq1ctzzmw0doz1bb].[sum:Fm Op Qty in Queue:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[sqlproxy.1sbl1sn0o465mq1ctzzmw0doz1bb].[sum:Fm Op Qty in Queue:qk]</rows>
+        <cols>[sqlproxy.1sbl1sn0o465mq1ctzzmw0doz1bb].[my:Last Touch Date:ok]</cols>
+      </table>
+      <simple-id uuid='{AD422088-93D0-4022-BD96-400881AA67C2}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='WIP Last Touch Date Dashboard'>
+      <repository-location derived-from='https://tableauanalytics.us.baesystems.com/t/ES/workbooks/WIPLastTouchDate/WIPLastTouchDateDashboard?rev=' id='17104' path='/t/ES/workbooks/WIPLastTouchDate' revision='' site='ES' />
+      <style />
+      <size maxheight='900' maxwidth='1600' minheight='900' minwidth='1600' preset-index='8' sizing-mode='fixed' />
+      <datasources>
+        <datasource caption='wip_open_qtys_date_last_moved' name='sqlproxy.1sbl1sn0o465mq1ctzzmw0doz1bb' />
+      </datasources>
+      <datasource-dependencies datasource='sqlproxy.1sbl1sn0o465mq1ctzzmw0doz1bb'>
+        <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[Fm Op Step]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+        <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[Job Number]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+        <column aggregation='Year' datatype='datetime' default-type='ordinal' layered='true' name='[Last Touch Date]' pivot='key' role='dimension' type='ordinal' user-datatype='datetime' visual-totals='Default' />
+        <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[Part Number]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+        <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[Planner]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+        <column-instance column='[Last Touch Date]' derivation='MY' name='[my:Last Touch Date:ok]' pivot='key' type='ordinal' />
+        <column-instance column='[Fm Op Step]' derivation='None' name='[none:Fm Op Step:nk]' pivot='key' type='nominal' />
+        <column-instance column='[Job Number]' derivation='None' name='[none:Job Number:nk]' pivot='key' type='nominal' />
+        <column-instance column='[Part Number]' derivation='None' name='[none:Part Number:nk]' pivot='key' type='nominal' />
+        <column-instance column='[Planner]' derivation='None' name='[none:Planner:nk]' pivot='key' type='nominal' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98222' id='3' param='vert' type-v2='layout-flow' w='86688' x='500' y='889'>
+            <zone h='32444' id='6' name='Sum Op in Queue over Last Touch Date' w='86688' x='500' y='889'>
+              <layout-cache minheight='185' type-h='scalable' type-w='fixed' />
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+            <zone fixed-size='584' h='65778' id='5' is-fixed='true' name='Last Touch Date Data Details' w='86688' x='500' y='33333'>
+              <layout-cache type-h='fixed' type-w='fixed' />
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+          </zone>
+          <zone h='98222' id='7' param='vert' type-v2='layout-flow' w='12312' x='87188' y='889'>
+            <zone h='56444' id='9' param='vert' type-v2='layout-flow' w='12312' x='87188' y='889'>
+              <zone h='35445' id='8' name='Last Touch Date Data Details' param='[sqlproxy.1sbl1sn0o465mq1ctzzmw0doz1bb].[my:Last Touch Date:ok]' show-apply='true' type-v2='filter' values='database' w='12312' x='87188' y='889'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='5333' id='10' mode='checkdropdown' name='Last Touch Date Data Details' param='[sqlproxy.1sbl1sn0o465mq1ctzzmw0doz1bb].[none:Part Number:nk]' show-apply='true' type-v2='filter' values='relevant' w='12312' x='87188' y='36334'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='5333' id='11' mode='checkdropdown' name='Last Touch Date Data Details' param='[sqlproxy.1sbl1sn0o465mq1ctzzmw0doz1bb].[none:Planner:nk]' show-apply='true' type-v2='filter' values='database' w='12312' x='87188' y='41667'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='5333' id='12' mode='checkdropdown' name='Last Touch Date Data Details' param='[sqlproxy.1sbl1sn0o465mq1ctzzmw0doz1bb].[none:Fm Op Step:nk]' show-apply='true' type-v2='filter' values='database' w='12312' x='87188' y='47000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='5000' id='13' mode='typeinlist' name='Last Touch Date Data Details' param='[sqlproxy.1sbl1sn0o465mq1ctzzmw0doz1bb].[none:Job Number:nk]' type-v2='filter' values='database' w='12312' x='87188' y='52333'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='900' minheight='900' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='35' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98222' id='34' param='vert' type-v2='layout-flow' w='99000' x='500' y='889'>
+                <zone fixed-size='280' h='32444' id='6' is-fixed='true' name='Sum Op in Queue over Last Touch Date' w='86688' x='500' y='889'>
+                  <layout-cache minheight='185' type-h='scalable' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='35445' id='8' mode='checkdropdown' name='Last Touch Date Data Details' param='[sqlproxy.1sbl1sn0o465mq1ctzzmw0doz1bb].[my:Last Touch Date:ok]' show-apply='true' type-v2='filter' values='database' w='12312' x='87188' y='889'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='5333' id='10' mode='checkdropdown' name='Last Touch Date Data Details' param='[sqlproxy.1sbl1sn0o465mq1ctzzmw0doz1bb].[none:Part Number:nk]' show-apply='true' type-v2='filter' values='relevant' w='12312' x='87188' y='36334'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='5333' id='11' mode='checkdropdown' name='Last Touch Date Data Details' param='[sqlproxy.1sbl1sn0o465mq1ctzzmw0doz1bb].[none:Planner:nk]' show-apply='true' type-v2='filter' values='database' w='12312' x='87188' y='41667'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='5333' id='12' mode='checkdropdown' name='Last Touch Date Data Details' param='[sqlproxy.1sbl1sn0o465mq1ctzzmw0doz1bb].[none:Fm Op Step:nk]' show-apply='true' type-v2='filter' values='database' w='12312' x='87188' y='47000'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='5000' id='13' mode='checkdropdown' name='Last Touch Date Data Details' param='[sqlproxy.1sbl1sn0o465mq1ctzzmw0doz1bb].[none:Job Number:nk]' type-v2='filter' values='database' w='12312' x='87188' y='52333'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='65778' id='5' is-fixed='true' name='Last Touch Date Data Details' w='86688' x='500' y='33333'>
+                  <layout-cache type-h='fixed' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{A1F5D750-DEE3-4536-86F2-37D68B5C3D8B}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='37'>
+    <window class='dashboard' maximized='true' name='WIP Last Touch Date Dashboard'>
+      <viewpoints>
+        <viewpoint name='Last Touch Date Data Details' />
+        <viewpoint name='Sum Op in Queue over Last Touch Date'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{AA8BE2A6-5F79-42C1-96A5-F85719F2D33E}' />
+    </window>
+    <window class='worksheet' name='Last Touch Date Data Details'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[sqlproxy.1sbl1sn0o465mq1ctzzmw0doz1bb].[:Measure Names]</field>
+            <field>[sqlproxy.1sbl1sn0o465mq1ctzzmw0doz1bb].[my:Last Touch Date:ok]</field>
+            <field>[sqlproxy.1sbl1sn0o465mq1ctzzmw0doz1bb].[none:Fm Op Step:nk]</field>
+            <field>[sqlproxy.1sbl1sn0o465mq1ctzzmw0doz1bb].[none:Job Number:nk]</field>
+            <field>[sqlproxy.1sbl1sn0o465mq1ctzzmw0doz1bb].[none:Job Scheduled Completion Date:ok]</field>
+            <field>[sqlproxy.1sbl1sn0o465mq1ctzzmw0doz1bb].[none:Job Scheduled Start Date:ok]</field>
+            <field>[sqlproxy.1sbl1sn0o465mq1ctzzmw0doz1bb].[none:Last Touch Date:ok]</field>
+            <field>[sqlproxy.1sbl1sn0o465mq1ctzzmw0doz1bb].[none:Part Number:nk]</field>
+            <field>[sqlproxy.1sbl1sn0o465mq1ctzzmw0doz1bb].[none:Planner:nk]</field>
+            <field>[sqlproxy.1sbl1sn0o465mq1ctzzmw0doz1bb].[none:WIP Job Status:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{A84E1E87-FBBF-418E-A311-322DADD18295}' />
+    </window>
+    <window class='worksheet' name='Sum Op in Queue over Last Touch Date'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[sqlproxy.1sbl1sn0o465mq1ctzzmw0doz1bb].[my:Last Touch Date:ok]</field>
+            <field>[sqlproxy.1sbl1sn0o465mq1ctzzmw0doz1bb].[none:Last Touch Date:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{398C7168-90C0-4FAC-BFE1-F8F7056FF291}' />
+    </window>
+  </windows>
+</workbook>

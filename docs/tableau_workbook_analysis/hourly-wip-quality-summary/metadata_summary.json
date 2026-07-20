@@ -1,0 +1,66 @@
+{
+  "source_workbook": "tableau/my-tableau-dashboards/Hourly WIP Quality Summary.twbx",
+  "embedded_twb": "Hourly WIP Quality Summary.twb",
+  "primary_dashboard": "Hourly WIP Quality Summary",
+  "dashboards": [
+    "Hourly WIP Quality Summary"
+  ],
+  "worksheet_count": 7,
+  "datasource_count": 1,
+  "calculated_field_count": 4,
+  "lod_calculation_count": 0,
+  "table_calculation_count": 2,
+  "screenshot": "docs/tableau_workbook_analysis/hourly-wip-quality-summary/Hourly-WIP-Quality-Summary.jpeg",
+  "likely_lineage_matches": [
+    {
+      "path": "models/2_staging/stg_wip_quality_summary_quality_rejects.sql",
+      "score": 24.0,
+      "reason": "shared tokens: quality, summary, wip"
+    },
+    {
+      "path": "models/2_staging/stg_wip_quality_summary_quality_reroutes.sql",
+      "score": 24.0,
+      "reason": "shared tokens: quality, summary, wip"
+    },
+    {
+      "path": "models/3_intermediate/int_wip_quality_summary_quality_rejects_and_sales_orders.sql",
+      "score": 24.0,
+      "reason": "shared tokens: quality, summary, wip"
+    },
+    {
+      "path": "models/3_intermediate/int_wip_quality_summary_quality_reroutes_and_sales_orders.sql",
+      "score": 24.0,
+      "reason": "shared tokens: quality, summary, wip"
+    },
+    {
+      "path": "models/3_intermediate/int_wip_quality_summary_wip.sql",
+      "score": 24.0,
+      "reason": "shared tokens: quality, summary, wip"
+    },
+    {
+      "path": "models/4_marts/wip_quality_summary_quality.sql",
+      "score": 24.0,
+      "reason": "shared tokens: quality, summary, wip"
+    },
+    {
+      "path": "models/4_marts/wip_quality_summary_wip.sql",
+      "score": 24.0,
+      "reason": "shared tokens: quality, summary, wip"
+    },
+    {
+      "path": "models/9_optimized_compiled_sql/minus_wip_quality_summary_wip.sql",
+      "score": 24.0,
+      "reason": "shared tokens: quality, summary, wip"
+    },
+    {
+      "path": "analyses/recommend_me_columns_initial/wip/rmc_wip_discrete_jobs.sql",
+      "score": 8.0,
+      "reason": "shared tokens: wip"
+    },
+    {
+      "path": "analyses/recommend_me_columns_initial/wip/rmc_wip_move_transactions.sql",
+      "score": 8.0,
+      "reason": "shared tokens: wip"
+    }
+  ]
+}

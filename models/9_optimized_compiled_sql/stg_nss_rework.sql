@@ -1,0 +1,78 @@
+  SELECT 
+    TO_DATE(QA3.CHARACTER4) AS "Transaction Date"
+    ,TO_NUMBER(QA.FROM_OP_SEQ_NUM) AS "Op Seq"
+    ,MSIB.SEGMENT1 AS "Part Number"
+    ,MSIB.DESCRIPTION AS "Part Description"
+    ,QA2.CHARACTER93 AS "Class Code"
+    /*
+    ,UPPER(NVL(
+      DECODE(MCB.SEGMENT1, 'COMMON', MTP.ATTRIBUTE4, 
+        MCB.SEGMENT1, MTP.ATTRIBUTE4, MTP.DESCRIPTION, 'COMMON')
+    )) AS "Program"
+    */
+    ,UPPER(COALESCE(
+        CASE 
+            WHEN MCB.SEGMENT1 = ''COMMON'' THEN MTP.ATTRIBUTE4
+            WHEN MCB.SEGMENT1 IS NOT NULL THEN MCB.SEGMENT1
+            ELSE MTP.DESCRIPTION
+        END, 
+        ''COMMON''
+    )) AS "Program"
+    ,QA2.CHARACTER92 AS "Org Code"
+    ,WE.WIP_ENTITY_NAME AS "Work Order"
+    ,QA3.CHARACTER10 AS "Serial Number"
+    ,QA3.CHARACTER33 AS "Employee Number"
+    ,QA3.CHARACTER18 AS "Defect_Code"
+    ,QA3.CHARACTER19 AS "Defect_Code_Meaning"
+    ,TO_NUMBER(QA3.CHARACTER1) AS "Def_Detail_ID"
+    ,CASE 
+      WHEN dpt.DEPARTMENT_CODE LIKE ''%TEST%'' THEN ''Test Rate''
+      ELSE ''Non-Test Rate''
+    END AS "Rate_Type"
+    ,CASE 
+      WHEN QA3.CHARACTER24 IN (''Design'',''NONM-CM'',''NONM-DSN'',''NONM-ELB'',''NONM-ENG'',''NONM-EQU'',''NONM-MCH'',''NONM-SQL'') THEN ''D''
+      WHEN QA3.CHARACTER24 IN (''NONM-BUY'',''NONM-MAS'',''NONM-MV'',''NONM-VND'',''NONM-WH'') THEN ''B''
+      WHEN QA3.CHARACTER24 IN (''Auxiliary Defect (Complatint Unrelated)'',''Auxiliary Defect (Complaint Unrelated)'',''Fundamental Defect (Complaint Related)'',''Instructed/Recommended'',''NONM-CUS'',''NONM-SRV'') THEN ''F''
+      WHEN QA3.CHARACTER18 = ''Z05'' THEN ''D''
+      ELSE ''M''
+    END AS "CoPQ Type"
+    ,1 AS "Include CoPQ v2024_01"
+    ,1 AS "Include CoPQ"
+  FROM APPS.QA_RESULTS QA
+  INNER JOIN APPS.MTL_SYSTEM_ITEMS_B MSIB
+    ON MSIB.ORGANIZATION_ID = QA.ORGANIZATION_ID
+    AND MSIB.INVENTORY_ITEM_ID = QA.ITEM_ID
+  LEFT JOIN APPS.MTL_ITEM_CATEGORIES mic
+    ON mic.inventory_item_id = msib.inventory_item_id
+    AND mic.organization_id = msib.organization_id
+    AND mic.category_set_id = 43 
+  LEFT JOIN APPS.MTL_CATEGORIES_B mcb
+    ON mcb.category_id = mic.category_id
+  LEFT JOIN APPS.MTL_PLANNERS MTP
+    ON MTP.PLANNER_CODE = MSIB.PLANNER_CODE
+    AND MTP.ORGANIZATION_ID = MSIB.ORGANIZATION_ID
+    AND MTP.DISABLE_DATE IS NULL
+  INNER JOIN APPS.WIP_ENTITIES WE
+    ON WE.ORGANIZATION_ID = QA.ORGANIZATION_ID
+    AND WE.WIP_ENTITY_ID = QA.WIP_ENTITY_ID
+  INNER JOIN APPS.QA_RESULTS QA2
+    ON QA2.PLAN_ID = 5181 
+    AND QA2.CHARACTER93 = QA.CHARACTER3 
+  LEFT JOIN APPS.QA_RESULTS QA3 
+    ON QA3.PLAN_ID = 5166 
+    AND QA3.CHARACTER11 = QA.CHARACTER2   
+    AND QA3.FROM_OP_SEQ_NUM = QA.FROM_OP_SEQ_NUM
+    AND QA3.WIP_ENTITY_ID = QA.WIP_ENTITY_ID
+  LEFT JOIN APPS.BOM_DEPARTMENTS dpt  
+    ON QA.department_id = dpt.department_id 
+    AND QA.organization_id = dpt.organization_id
+  WHERE 1=1
+  AND QA.PLAN_ID = 5179
+  AND MSIB.INVENTORY_ITEM_STATUS_CODE = ''40''  
+  AND QA.CHARACTER3 = ''P''  
+  AND (QA3.CHARACTER38 IS NULL OR QA3.CHARACTER38 != ''1'') 
+  AND (QA.STATUS IS NULL OR QA.STATUS = 2)
+  AND (QA3.STATUS IS NULL OR QA3.STATUS = 2)
+  AND QA3.CHARACTER4 IS NOT NULL 
+  AND QA3.CHARACTER18 NOT IN (''Z01'', ''Z02'', ''Z03'', ''Z06'')  
+  AND TO_DATE(QA3.CHARACTER4, ''YYYY-MM-DD'') >= DATE ''2024-12-28''

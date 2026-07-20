@@ -1,0 +1,84 @@
+Mac Git Setup Checklist
+
+1. Install Git
+
+git --version
+
+If Git is missing, macOS may prompt you to install Xcode Command Line Tools.
+
+Or install Git with Homebrew:
+
+brew install git
+
+
+2. Install Homebrew if needed
+
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+
+3. Configure your Git identity
+
+git config --global user.name "Your Name"
+git config --global user.email "your-email@example.com"
+
+
+4. Set your default branch name
+
+git config --global init.defaultBranch main
+
+
+5. Set VS Code as your Git editor
+
+git config --global core.editor "code --wait"
+
+
+6. Generate an SSH key for GitHub
+
+ssh-keygen -t ed25519 -C "your-email@example.com"
+
+
+7. Start the SSH agent and add your key
+
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
+
+
+8. Copy your public SSH key
+
+pbcopy < ~/.ssh/id_ed25519.pub
+
+
+9. Add the key in GitHub
+
+GitHub -> Settings -> SSH and GPG keys -> New SSH key
+
+
+10. Test GitHub SSH access
+
+ssh -T git@github.com
+
+
+11. Clone your repo
+
+git clone git@github.com:aguerra626/music-viz.git
+
+
+12. Basic daily Git commands
+
+git status
+git pull
+git add .
+git commit -m "message"
+git push
+
+
+13. Optional: install GitHub CLI
+
+brew install gh
+gh auth login
+
+
+Note
+
+On macOS, you usually use Terminal or zsh instead of Git Bash.
+Git Bash is mainly a Windows tool. Terminal + Git gives you the same Git workflow.

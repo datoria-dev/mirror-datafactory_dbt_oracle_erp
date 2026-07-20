@@ -1,0 +1,68 @@
+{
+  "source_workbook": "tableau/my-tableau-dashboards/DefectConfirmations_PROD.twbx",
+  "embedded_twb": "DefectConfirmations_PROD.twb",
+  "primary_dashboard": "Defect Confirmations Dashboard",
+  "dashboards": [
+    "Defect Confirmations Dashboard",
+    "RTY FCM Dashboard",
+    "RTY SAASM Dashboard"
+  ],
+  "worksheet_count": 8,
+  "datasource_count": 2,
+  "calculated_field_count": 14,
+  "lod_calculation_count": 1,
+  "table_calculation_count": 4,
+  "screenshot": "docs/tableau_workbook_analysis/defect-confirmations-prod/Defect-Confirmations-Dashboard.jpeg",
+  "likely_lineage_matches": [
+    {
+      "path": "models/9_optimized_compiled_sql/DefectConfirmations_PROD.sql",
+      "score": 216.0,
+      "reason": "exact normalized name; shared tokens: confirmations, defect"
+    },
+    {
+      "path": "models/9_optimized_compiled_sql/RTY.sql",
+      "score": 98.0,
+      "reason": "normalized substring; shared tokens: rty"
+    },
+    {
+      "path": "analyses/supporting_tools/data_quality/int_saasm_top_level_sales_lines_and_deliveries___oeh_flow_status_code.sql",
+      "score": 8.0,
+      "reason": "shared tokens: saasm"
+    },
+    {
+      "path": "analyses/supporting_tools/data_quality/int_saasm_top_level_sales_lines_and_deliveries___oeh_line_category_code.sql",
+      "score": 8.0,
+      "reason": "shared tokens: saasm"
+    },
+    {
+      "path": "analyses/supporting_tools/data_quality/int_saasm_top_level_sales_lines_and_deliveries___oel_flow_status_code.sql",
+      "score": 8.0,
+      "reason": "shared tokens: saasm"
+    },
+    {
+      "path": "analyses/supporting_tools/data_quality/int_saasm_top_level_sales_lines_and_deliveries___oel_line_category_code.sql",
+      "score": 8.0,
+      "reason": "shared tokens: saasm"
+    },
+    {
+      "path": "analyses/supporting_tools/data_quality/int_saasm_top_level_sales_lines_and_deliveries___wsh_nd_status_code.sql",
+      "score": 8.0,
+      "reason": "shared tokens: saasm"
+    },
+    {
+      "path": "models/3_intermediate/int_saasm_custowned_material_transactions.sql",
+      "score": 8.0,
+      "reason": "shared tokens: saasm"
+    },
+    {
+      "path": "models/3_intermediate/int_saasm_sales_lines_and_deliveries.sql",
+      "score": 8.0,
+      "reason": "shared tokens: saasm"
+    },
+    {
+      "path": "models/3_intermediate/int_saasm_top_level_sales_lines.sql",
+      "score": 8.0,
+      "reason": "shared tokens: saasm"
+    }
+  ]
+}

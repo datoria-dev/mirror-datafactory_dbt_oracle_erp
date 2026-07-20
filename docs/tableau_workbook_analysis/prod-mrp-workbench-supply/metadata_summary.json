@@ -1,0 +1,68 @@
+{
+  "source_workbook": "tableau/my-tableau-dashboards/PROD_MRP_WORKBENCH_SUPPLY.twbx",
+  "embedded_twb": "PROD_MRP_WORKBENCH_SUPPLY.twb",
+  "primary_dashboard": "MRP Workbench Supply Dashboard",
+  "dashboards": [
+    "MRP WORKBENCH SUPPLY DRILL-DOWN Dashboard",
+    "MRP Workbench Data Details Dashboard",
+    "MRP Workbench Supply Dashboard"
+  ],
+  "worksheet_count": 3,
+  "datasource_count": 1,
+  "calculated_field_count": 1,
+  "lod_calculation_count": 0,
+  "table_calculation_count": 0,
+  "screenshot": "docs/tableau_workbook_analysis/prod-mrp-workbench-supply/MRP-Workbench-Supply-Dashboard.jpeg",
+  "likely_lineage_matches": [
+    {
+      "path": "models/1_sources/lookups/lu_mtl_mrp_supply_demand_source_type.sql",
+      "score": 16.0,
+      "reason": "shared tokens: mrp, supply"
+    },
+    {
+      "path": "analyses/recommend_me_columns_initial/bom/rmc_bom_cst_item_cost_details.sql",
+      "score": 8.0,
+      "reason": "shared tokens: details"
+    },
+    {
+      "path": "analyses/recommend_me_columns_initial/mrp/rmc_mrp_sales_order_updates.sql",
+      "score": 8.0,
+      "reason": "shared tokens: mrp"
+    },
+    {
+      "path": "analyses/recommend_me_columns_initial/wsh/rmc_wsh_delivery_details.sql",
+      "score": 8.0,
+      "reason": "shared tokens: details"
+    },
+    {
+      "path": "analyses/supporting_tools/data_quality/int_rollup_delivery_details_delivery_name__wsh_dd_source_line_id.sql",
+      "score": 8.0,
+      "reason": "shared tokens: details"
+    },
+    {
+      "path": "analyses/supporting_tools/data_quality/int_rollup_delivery_details_delivery_name__wsh_nd_name.sql",
+      "score": 8.0,
+      "reason": "shared tokens: details"
+    },
+    {
+      "path": "analyses/supporting_tools/data_quality/int_rollup_delivery_details_delivery_name__wsh_nd_name__windowfunction.sql",
+      "score": 8.0,
+      "reason": "shared tokens: details"
+    },
+    {
+      "path": "analyses/supporting_tools/data_quality/src_mtl_reservations_counts_demand_supply_source_type_id.sql",
+      "score": 8.0,
+      "reason": "shared tokens: supply"
+    },
+    {
+      "path": "knowledgebase/tableau/Dynamic_Daily_Rates_PROD_tableau_data_catalog_lineage.md",
+      "score": 8.0,
+      "reason": "shared tokens: data"
+    },
+    {
+      "path": "knowledgebase/tableau/Employee_WIP_Moves_Last_365_Days_tableau_data_catalog_lineage.md",
+      "score": 8.0,
+      "reason": "shared tokens: data"
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "source_workbook": "tableau/my-tableau-dashboards/NavFireDaily_PROD.twbx",
+  "embedded_twb": "NavFireDaily_PROD.twb",
+  "primary_dashboard": "NavFire Daily Transactions",
+  "dashboards": [
+    "DAGR Daily Transactions",
+    "NavFire Daily Transactions",
+    "Roll Over Qtys Validation",
+    "zz.Basic Dashboard 1"
+  ],
+  "worksheet_count": 11,
+  "datasource_count": 2,
+  "calculated_field_count": 9,
+  "lod_calculation_count": 1,
+  "table_calculation_count": 0,
+  "screenshot": "docs/tableau_workbook_analysis/nav-fire-daily-prod/NavFire-Daily-Transactions.jpeg",
+  "likely_lineage_matches": [
+    {
+      "path": "models/9_optimized_compiled_sql/PROD_MoveTransactions.sql",
+      "score": 61.0,
+      "reason": "normalized substring; shared tokens: move, transactions"
+    },
+    {
+      "path": "analyses/recommend_me_columns_initial/wip/rmc_wip_move_transactions.sql",
+      "score": 16.0,
+      "reason": "shared tokens: move, transactions"
+    },
+    {
+      "path": "analyses/supporting_tools/data_quality/AddNavStrikePNs_move_trxns_dynamic.sql",
+      "score": 16.0,
+      "reason": "shared tokens: move, nav"
+    },
+    {
+      "path": "knowledgebase/tableau/PROD_MoveTransactions_tableau_data_catalog_lineage.md",
+      "score": 16.0,
+      "reason": "shared tokens: move, transactions"
+    },
+    {
+      "path": "models/1_sources/wip/src_wip_move_transactions_14days.sql",
+      "score": 16.0,
+      "reason": "shared tokens: move, transactions"
+    },
+    {
+      "path": "models/1_sources/wip/src_wip_move_transactions_30days.sql",
+      "score": 16.0,
+      "reason": "shared tokens: move, transactions"
+    },
+    {
+      "path": "models/1_sources/wip/src_wip_move_transactions_365days.sql",
+      "score": 16.0,
+      "reason": "shared tokens: move, transactions"
+    },
+    {
+      "path": "models/1_sources/wip/src_wip_move_transactions_45days.sql",
+      "score": 16.0,
+      "reason": "shared tokens: move, transactions"
+    },
+    {
+      "path": "models/3_intermediate/int_move_trxns_dynamic_daily_rate.sql",
+      "score": 16.0,
+      "reason": "shared tokens: daily, move"
+    },
+    {
+      "path": "models/3_intermediate/int_move_trxns_dynamic_daily_rate_part2.sql",
+      "score": 16.0,
+      "reason": "shared tokens: daily, move"
+    }
+  ]
+}

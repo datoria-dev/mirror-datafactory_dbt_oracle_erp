@@ -1,0 +1,66 @@
+{
+  "source_workbook": "tableau/my-tableau-dashboards/PROD_MoveTransactionsDailyRefresh.twbx",
+  "embedded_twb": "PROD_MoveTransactionsDailyRefresh.twb",
+  "primary_dashboard": "Move Transac. by Op Desc",
+  "dashboards": [
+    "Move Transac. by Op Desc"
+  ],
+  "worksheet_count": 5,
+  "datasource_count": 1,
+  "calculated_field_count": 5,
+  "lod_calculation_count": 0,
+  "table_calculation_count": 1,
+  "screenshot": "docs/tableau_workbook_analysis/prod-move-transactions-daily-refresh/Move-Transac-by-Op-Desc.jpeg",
+  "likely_lineage_matches": [
+    {
+      "path": "models/9_optimized_compiled_sql/PROD_MoveTransactions.sql",
+      "score": 106.0,
+      "reason": "normalized substring; shared tokens: move, transactions"
+    },
+    {
+      "path": "analyses/recommend_me_columns_initial/wip/rmc_wip_move_transactions.sql",
+      "score": 16.0,
+      "reason": "shared tokens: move, transactions"
+    },
+    {
+      "path": "knowledgebase/tableau/PROD_MoveTransactions_tableau_data_catalog_lineage.md",
+      "score": 16.0,
+      "reason": "shared tokens: move, transactions"
+    },
+    {
+      "path": "models/1_sources/wip/src_wip_move_transactions_14days.sql",
+      "score": 16.0,
+      "reason": "shared tokens: move, transactions"
+    },
+    {
+      "path": "models/1_sources/wip/src_wip_move_transactions_30days.sql",
+      "score": 16.0,
+      "reason": "shared tokens: move, transactions"
+    },
+    {
+      "path": "models/1_sources/wip/src_wip_move_transactions_365days.sql",
+      "score": 16.0,
+      "reason": "shared tokens: move, transactions"
+    },
+    {
+      "path": "models/1_sources/wip/src_wip_move_transactions_45days.sql",
+      "score": 16.0,
+      "reason": "shared tokens: move, transactions"
+    },
+    {
+      "path": "models/3_intermediate/int_move_trxns_dynamic_daily_rate.sql",
+      "score": 16.0,
+      "reason": "shared tokens: daily, move"
+    },
+    {
+      "path": "models/3_intermediate/int_move_trxns_dynamic_daily_rate_part2.sql",
+      "score": 16.0,
+      "reason": "shared tokens: daily, move"
+    },
+    {
+      "path": "models/3_intermediate/int_wip_nettable_credit_op_step_for_queue_to_move_types.sql",
+      "score": 16.0,
+      "reason": "shared tokens: move, op"
+    }
+  ]
+}

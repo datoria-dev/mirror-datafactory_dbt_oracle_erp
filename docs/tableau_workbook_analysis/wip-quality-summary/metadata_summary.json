@@ -1,0 +1,66 @@
+{
+  "source_workbook": "tableau/my-tableau-dashboards/WIP Quality Summary.twb",
+  "embedded_twb": "WIP Quality Summary.twb",
+  "primary_dashboard": "WIP Quality Summary Dashboard",
+  "dashboards": [
+    "WIP Quality Summary Dashboard"
+  ],
+  "worksheet_count": 3,
+  "datasource_count": 2,
+  "calculated_field_count": 8,
+  "lod_calculation_count": 0,
+  "table_calculation_count": 4,
+  "screenshot": "docs/tableau_workbook_analysis/wip-quality-summary/WIP-Quality-Summary-Dashboard.jpeg",
+  "likely_lineage_matches": [
+    {
+      "path": "models/9_optimized_compiled_sql/minus_wip_quality_summary_wip.sql",
+      "score": 177.0,
+      "reason": "normalized substring; exact normalized name; shared tokens: minus, quality, summary, wip"
+    },
+    {
+      "path": "models/4_marts/wip_quality_summary_quality.sql",
+      "score": 169.0,
+      "reason": "normalized substring; exact normalized name; shared tokens: quality, summary, wip"
+    },
+    {
+      "path": "models/2_staging/stg_wip_quality_summary_quality_rejects.sql",
+      "score": 114.0,
+      "reason": "normalized substring; shared tokens: quality, summary, wip"
+    },
+    {
+      "path": "models/2_staging/stg_wip_quality_summary_quality_reroutes.sql",
+      "score": 114.0,
+      "reason": "normalized substring; shared tokens: quality, summary, wip"
+    },
+    {
+      "path": "models/3_intermediate/int_wip_quality_summary_quality_rejects_and_sales_orders.sql",
+      "score": 114.0,
+      "reason": "normalized substring; shared tokens: quality, summary, wip"
+    },
+    {
+      "path": "models/3_intermediate/int_wip_quality_summary_quality_reroutes_and_sales_orders.sql",
+      "score": 114.0,
+      "reason": "normalized substring; shared tokens: quality, summary, wip"
+    },
+    {
+      "path": "models/4_marts/wip_quality_summary_wip.sql",
+      "score": 114.0,
+      "reason": "normalized substring; shared tokens: quality, summary, wip"
+    },
+    {
+      "path": "models/3_intermediate/int_wip_quality_summary_wip.sql",
+      "score": 69.0,
+      "reason": "normalized substring; shared tokens: quality, summary, wip"
+    },
+    {
+      "path": "models/9_optimized_compiled_sql/minus_employee_wip_moves_14days.sql",
+      "score": 16.0,
+      "reason": "shared tokens: minus, wip"
+    },
+    {
+      "path": "models/9_optimized_compiled_sql/minus_employee_wip_moves_alltime.sql",
+      "score": 16.0,
+      "reason": "shared tokens: minus, wip"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+variables:
+  PIP_INDEX_URL: "https://artifactory.devlnk.net/artifactory/api/pypi/pypi-remote/simple"
+  PIP_TRUSTED_HOST: "artifactory.devlnk.net pypi.org files.pythonhosted.org" 
+
+stages:
+  - deploy
+
+pages:
+  stage: deploy
+  script:
+    - mkdir -p public
+    - cp docs/index.html docs/manifest.json docs/catalog.json public/
+  artifacts:
+    paths:
+      - public
+  only:
+    - main

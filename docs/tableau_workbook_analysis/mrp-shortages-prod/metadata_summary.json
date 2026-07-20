@@ -1,0 +1,66 @@
+{
+  "source_workbook": "tableau/my-tableau-dashboards/MRP Shortages_PROD.twbx",
+  "embedded_twb": "MRP Shortages_PROD.twb",
+  "primary_dashboard": "MRP Material Shortages Dashboard",
+  "dashboards": [
+    "MRP Material Shortages Dashboard"
+  ],
+  "worksheet_count": 5,
+  "datasource_count": 1,
+  "calculated_field_count": 5,
+  "lod_calculation_count": 0,
+  "table_calculation_count": 0,
+  "screenshot": null,
+  "likely_lineage_matches": [
+    {
+      "path": "analyses/recommend_me_columns_initial/inv/rmc_inv_mtl_material_transactions.sql",
+      "score": 8.0,
+      "reason": "shared tokens: material"
+    },
+    {
+      "path": "analyses/recommend_me_columns_initial/mrp/rmc_mrp_sales_order_updates.sql",
+      "score": 8.0,
+      "reason": "shared tokens: mrp"
+    },
+    {
+      "path": "models/1_sources/inv/src_inv_mtl_material_transactions.sql",
+      "score": 8.0,
+      "reason": "shared tokens: material"
+    },
+    {
+      "path": "models/1_sources/inv/src_inv_mtl_material_transactions_custowned_alltime.sql",
+      "score": 8.0,
+      "reason": "shared tokens: material"
+    },
+    {
+      "path": "models/1_sources/inv/src_inv_mtl_material_transactions_type44.sql",
+      "score": 8.0,
+      "reason": "shared tokens: material"
+    },
+    {
+      "path": "models/1_sources/inv/src_inv_mtl_material_transactions_type44_45days.sql",
+      "score": 8.0,
+      "reason": "shared tokens: material"
+    },
+    {
+      "path": "models/1_sources/inv/src_inv_mtl_material_transactions_wip_issuances.sql",
+      "score": 8.0,
+      "reason": "shared tokens: material"
+    },
+    {
+      "path": "models/1_sources/lookups/lu_mtl_mrp_supply_demand_source_type.sql",
+      "score": 8.0,
+      "reason": "shared tokens: mrp"
+    },
+    {
+      "path": "models/1_sources/mrp/src_mrp_full_pegging.sql",
+      "score": 8.0,
+      "reason": "shared tokens: mrp"
+    },
+    {
+      "path": "models/1_sources/mrp/src_mrp_gross_requirements.sql",
+      "score": 8.0,
+      "reason": "shared tokens: mrp"
+    }
+  ]
+}

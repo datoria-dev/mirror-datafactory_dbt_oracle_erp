@@ -1,0 +1,22 @@
+dbt_packages/
+logs/
+secrets/
+*.env
+.env
+.env.*
+!.env.example
+.venv/
+.user.yml
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+dist/
+.DS_Store
+conf/token.txt
+*.hyper
+*.tde
+
+# ESBI target artifacts are intentionally preserved in Git.
+!target/
+!target/**

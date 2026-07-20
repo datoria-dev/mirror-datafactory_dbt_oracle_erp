@@ -1,0 +1,71 @@
+{
+  "source_workbook": "tableau/my-tableau-dashboards/NSS Defect Details Report.twbx",
+  "embedded_twb": "NSS Defect Details Report.twb",
+  "primary_dashboard": "NSS Defect Details Report",
+  "dashboards": [
+    "Board Build - Pivots",
+    "CRGs Defect Details Report",
+    "Micro - Pivots",
+    "NPI - Pivots",
+    "NSS Defect Details Report",
+    "Top Level - Pivots"
+  ],
+  "worksheet_count": 20,
+  "datasource_count": 1,
+  "calculated_field_count": 2,
+  "lod_calculation_count": 0,
+  "table_calculation_count": 1,
+  "screenshot": "docs/tableau_workbook_analysis/nss-defect-details-report/NSS-Defect-Details-Report.jpeg",
+  "likely_lineage_matches": [
+    {
+      "path": "models/9_optimized_compiled_sql/midas_DEFECT_DETAILS_TBL_WITH_RESULT_168.sql",
+      "score": 93.0,
+      "reason": "normalized substring; shared tokens: 168, defect, details, result, tbl, with"
+    },
+    {
+      "path": "analyses/supporting_tools/data_quality/int_saasm_top_level_sales_lines_and_deliveries___oeh_flow_status_code.sql",
+      "score": 16.0,
+      "reason": "shared tokens: level, top"
+    },
+    {
+      "path": "analyses/supporting_tools/data_quality/int_saasm_top_level_sales_lines_and_deliveries___oeh_line_category_code.sql",
+      "score": 16.0,
+      "reason": "shared tokens: level, top"
+    },
+    {
+      "path": "analyses/supporting_tools/data_quality/int_saasm_top_level_sales_lines_and_deliveries___oel_flow_status_code.sql",
+      "score": 16.0,
+      "reason": "shared tokens: level, top"
+    },
+    {
+      "path": "analyses/supporting_tools/data_quality/int_saasm_top_level_sales_lines_and_deliveries___oel_line_category_code.sql",
+      "score": 16.0,
+      "reason": "shared tokens: level, top"
+    },
+    {
+      "path": "analyses/supporting_tools/data_quality/int_saasm_top_level_sales_lines_and_deliveries___wsh_nd_status_code.sql",
+      "score": 16.0,
+      "reason": "shared tokens: level, top"
+    },
+    {
+      "path": "models/3_intermediate/int_saasm_top_level_sales_lines.sql",
+      "score": 16.0,
+      "reason": "shared tokens: level, top"
+    },
+    {
+      "path": "models/3_intermediate/int_saasm_top_level_sales_lines_and_deliveries.sql",
+      "score": 16.0,
+      "reason": "shared tokens: level, top"
+    },
+    {
+      "path": "models/4_marts/dimensions/dim_quality_defect_details_and_results_recording.sql",
+      "score": 16.0,
+      "reason": "shared tokens: defect, details"
+    },
+    {
+      "path": "models/4_marts/dimensions/dim_quality_defect_details_as_child.sql",
+      "score": 16.0,
+      "reason": "shared tokens: defect, details"
+    }
+  ]
+}

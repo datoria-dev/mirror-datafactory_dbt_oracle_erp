@@ -1,0 +1,68 @@
+{
+  "source_workbook": "tableau/my-tableau-dashboards/SAASM VMI Sales, Inventory, and Production Alignment.twbx",
+  "embedded_twb": "SAASM VMI Sales, Inventory, and Production Alignment (4).twb",
+  "primary_dashboard": "SAASM VMI Dashboard",
+  "dashboards": [
+    "Cascading Qtys by Locator",
+    "SAASM VMI Dashboard",
+    "SAASM VMI Export Ready"
+  ],
+  "worksheet_count": 13,
+  "datasource_count": 1,
+  "calculated_field_count": 16,
+  "lod_calculation_count": 0,
+  "table_calculation_count": 4,
+  "screenshot": "docs/tableau_workbook_analysis/saasm-vmi-sales-inventory-and-production-alignment/SAASM-VMI-Dashboard.jpeg",
+  "likely_lineage_matches": [
+    {
+      "path": "models/4_marts/saasm_vmi.sql",
+      "score": 296.0,
+      "reason": "normalized substring; exact normalized name; shared tokens: saasm, vmi"
+    },
+    {
+      "path": "models/4_marts/saasm_from_vmi_sales_planned_qtys.sql",
+      "score": 32.0,
+      "reason": "shared tokens: qtys, saasm, sales, vmi"
+    },
+    {
+      "path": "models/4_marts/saasm_for_top_level_sales_planned_qtys.sql",
+      "score": 24.0,
+      "reason": "shared tokens: qtys, saasm, sales"
+    },
+    {
+      "path": "analyses/supporting_tools/data_quality/int_saasm_top_level_sales_lines_and_deliveries___oeh_flow_status_code.sql",
+      "score": 16.0,
+      "reason": "shared tokens: saasm, sales"
+    },
+    {
+      "path": "analyses/supporting_tools/data_quality/int_saasm_top_level_sales_lines_and_deliveries___oeh_line_category_code.sql",
+      "score": 16.0,
+      "reason": "shared tokens: saasm, sales"
+    },
+    {
+      "path": "analyses/supporting_tools/data_quality/int_saasm_top_level_sales_lines_and_deliveries___oel_flow_status_code.sql",
+      "score": 16.0,
+      "reason": "shared tokens: saasm, sales"
+    },
+    {
+      "path": "analyses/supporting_tools/data_quality/int_saasm_top_level_sales_lines_and_deliveries___oel_line_category_code.sql",
+      "score": 16.0,
+      "reason": "shared tokens: saasm, sales"
+    },
+    {
+      "path": "analyses/supporting_tools/data_quality/int_saasm_top_level_sales_lines_and_deliveries___wsh_nd_status_code.sql",
+      "score": 16.0,
+      "reason": "shared tokens: saasm, sales"
+    },
+    {
+      "path": "models/3_intermediate/int_saasm_sales_lines_and_deliveries.sql",
+      "score": 16.0,
+      "reason": "shared tokens: saasm, sales"
+    },
+    {
+      "path": "models/3_intermediate/int_saasm_top_level_sales_lines.sql",
+      "score": 16.0,
+      "reason": "shared tokens: saasm, sales"
+    }
+  ]
+}

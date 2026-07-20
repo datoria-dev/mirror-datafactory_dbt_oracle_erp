@@ -1,0 +1,67 @@
+{
+  "source_workbook": "tableau/my-tableau-dashboards/Pivots_HorizontalWIP_PROD.twbx",
+  "embedded_twb": "Pivots_HorizontalWIP_PROD.twb",
+  "primary_dashboard": "WIP Matrix by Op Desc Dash",
+  "dashboards": [
+    "WIP Matrix by Dept over Qty Dash",
+    "WIP Matrix by Op Desc Dash"
+  ],
+  "worksheet_count": 4,
+  "datasource_count": 1,
+  "calculated_field_count": 2,
+  "lod_calculation_count": 0,
+  "table_calculation_count": 0,
+  "screenshot": "docs/tableau_workbook_analysis/pivots-horizontal-wip-prod/WIP-Matrix-by-Op-Desc-Dash.jpeg",
+  "likely_lineage_matches": [
+    {
+      "path": "knowledgebase/tableau/Pivots_HorizontalWIP_PROD_tableau_data_catalog_lineage.md",
+      "score": 114.0,
+      "reason": "normalized substring; shared tokens: horizontal, pivots, wip"
+    },
+    {
+      "path": "models/4_marts/horizontal_wip.sql",
+      "score": 106.0,
+      "reason": "normalized substring; shared tokens: horizontal, wip"
+    },
+    {
+      "path": "models/4_marts/horizontal_wip_agg_qty_to_move.sql",
+      "score": 24.0,
+      "reason": "shared tokens: horizontal, qty, wip"
+    },
+    {
+      "path": "models/4_marts/horizontal_wip_qty_in_queue_gt_0.sql",
+      "score": 24.0,
+      "reason": "shared tokens: horizontal, qty, wip"
+    },
+    {
+      "path": "knowledgebase/tableau/PROD_HorizontalWIP_tableau_data_catalog_lineage.md",
+      "score": 16.0,
+      "reason": "shared tokens: horizontal, wip"
+    },
+    {
+      "path": "models/3_intermediate/int_horizontal_wip.sql",
+      "score": 16.0,
+      "reason": "shared tokens: horizontal, wip"
+    },
+    {
+      "path": "models/3_intermediate/int_horizontal_wip_released_unreleased.sql",
+      "score": 16.0,
+      "reason": "shared tokens: horizontal, wip"
+    },
+    {
+      "path": "models/3_intermediate/int_wip_nettable_credit_op_step_for_queue_to_move_types.sql",
+      "score": 16.0,
+      "reason": "shared tokens: op, wip"
+    },
+    {
+      "path": "models/9_optimized_compiled_sql/minus_horizontal_wip.sql",
+      "score": 16.0,
+      "reason": "shared tokens: horizontal, wip"
+    },
+    {
+      "path": "analyses/recommend_me_columns_initial/wip/rmc_wip_discrete_jobs.sql",
+      "score": 8.0,
+      "reason": "shared tokens: wip"
+    }
+  ]
+}

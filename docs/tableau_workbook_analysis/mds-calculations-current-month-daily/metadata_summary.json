@@ -1,0 +1,67 @@
+{
+  "source_workbook": "tableau/my-tableau-dashboards/MDS Calculations Current Month Daily.twbx",
+  "embedded_twb": "MDS Calculations Current Month Daily.twb",
+  "primary_dashboard": "MDS Calculations Daily Report",
+  "dashboards": [
+    "Current Past Dues Trend Analysis Dashboard",
+    "MDS Calculations Daily Report"
+  ],
+  "worksheet_count": 7,
+  "datasource_count": 1,
+  "calculated_field_count": 12,
+  "lod_calculation_count": 0,
+  "table_calculation_count": 6,
+  "screenshot": "docs/tableau_workbook_analysis/mds-calculations-current-month-daily/MDS-Calculations-Daily-Report.jpeg",
+  "likely_lineage_matches": [
+    {
+      "path": "seeds/mrp_planning_snapshot_current_month.csv",
+      "score": 85.0,
+      "reason": "normalized substring; shared tokens: current, month, mrp, planning, snapshot"
+    },
+    {
+      "path": "models/4_marts/item_program_details.sql",
+      "score": 69.0,
+      "reason": "normalized substring; shared tokens: details, item, program"
+    },
+    {
+      "path": "models/4_marts/actuals_build.sql",
+      "score": 61.0,
+      "reason": "normalized substring; shared tokens: actuals, build"
+    },
+    {
+      "path": "seeds/item_program_details__nss_ops_part_numbers_and_domains.csv",
+      "score": 40.0,
+      "reason": "shared tokens: details, domains, item, nss, program"
+    },
+    {
+      "path": "models/3_intermediate/int_item_program_details.sql",
+      "score": 24.0,
+      "reason": "shared tokens: details, item, program"
+    },
+    {
+      "path": "models/3_intermediate/int_mrp_monthly_snapshot_build.sql",
+      "score": 24.0,
+      "reason": "shared tokens: build, mrp, snapshot"
+    },
+    {
+      "path": "models/99_oracle_sql_dev/item_program_details_tableau_prep_formatted.sql",
+      "score": 24.0,
+      "reason": "shared tokens: details, item, program"
+    },
+    {
+      "path": "models/99_oracle_sql_dev/minus_mrp_monthly_build_delivery_tableau_flow_formatted.sql",
+      "score": 24.0,
+      "reason": "shared tokens: build, minus, mrp"
+    },
+    {
+      "path": "models/9_optimized_compiled_sql/minus_actuals_build_delivery.sql",
+      "score": 24.0,
+      "reason": "shared tokens: actuals, build, minus"
+    },
+    {
+      "path": "models/9_optimized_compiled_sql/minus_actuals_build_delivery_historical.sql",
+      "score": 24.0,
+      "reason": "shared tokens: actuals, build, minus"
+    }
+  ]
+}

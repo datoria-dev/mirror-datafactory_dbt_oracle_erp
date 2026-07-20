@@ -1,0 +1,66 @@
+{
+  "source_workbook": "tableau/my-tableau-dashboards/NSS SMT BOM CompExp Dashboard_PROD.twbx",
+  "embedded_twb": "NSS SMT BOM CompExp Dashboard_PROD.twb",
+  "primary_dashboard": "NSS SMT BOM CompExp Dashboard",
+  "dashboards": [
+    "NSS SMT BOM CompExp Dashboard"
+  ],
+  "worksheet_count": 2,
+  "datasource_count": 1,
+  "calculated_field_count": 0,
+  "lod_calculation_count": 0,
+  "table_calculation_count": 0,
+  "screenshot": null,
+  "likely_lineage_matches": [
+    {
+      "path": "models/9_optimized_compiled_sql/SMT_BOM_CompExp.sql",
+      "score": 212.0,
+      "reason": "normalized substring; shared tokens: bom, comp, exp, smt"
+    },
+    {
+      "path": "analyses/oracle_get_profile_initial/ogp_bom_departments.sql",
+      "score": 8.0,
+      "reason": "shared tokens: bom"
+    },
+    {
+      "path": "analyses/recommend_me_columns_initial/bom/rmc_bom_components_b.sql",
+      "score": 8.0,
+      "reason": "shared tokens: bom"
+    },
+    {
+      "path": "analyses/recommend_me_columns_initial/bom/rmc_bom_cst_cost_types.sql",
+      "score": 8.0,
+      "reason": "shared tokens: bom"
+    },
+    {
+      "path": "analyses/recommend_me_columns_initial/bom/rmc_bom_cst_item_cost_details.sql",
+      "score": 8.0,
+      "reason": "shared tokens: bom"
+    },
+    {
+      "path": "analyses/recommend_me_columns_initial/bom/rmc_bom_cst_item_costs.sql",
+      "score": 8.0,
+      "reason": "shared tokens: bom"
+    },
+    {
+      "path": "analyses/recommend_me_columns_initial/bom/rmc_bom_departments.sql",
+      "score": 8.0,
+      "reason": "shared tokens: bom"
+    },
+    {
+      "path": "analyses/recommend_me_columns_initial/bom/rmc_bom_operational_routings.sql",
+      "score": 8.0,
+      "reason": "shared tokens: bom"
+    },
+    {
+      "path": "analyses/recommend_me_columns_initial/bom/rmc_bom_operational_sequences.sql",
+      "score": 8.0,
+      "reason": "shared tokens: bom"
+    },
+    {
+      "path": "analyses/recommend_me_columns_initial/bom/rmc_bom_reference_designators.sql",
+      "score": 8.0,
+      "reason": "shared tokens: bom"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+USCEBSPR.WORLD=
+    (DESCRIPTION_LIST=
+        (LOAD_BALANCE=YES)
+        (FAILOVER=YES)
+        (DESCRIPTION=
+         (ADDRESS=(PROTOCOL=tcp)(HOST=nhnaunxeodbp003-vip.goldlnk.rootlnka.net)(PORT=1532))
+            (CONNECT_DATA=
+                (SERVICE_NAME=ebs_USCEBSPR)
+                (INSTANCE_NAME=CUSCEBSPR0001)
+            )
+        )
+        (DESCRIPTION=
+                (ADDRESS=(PROTOCOL=tcp)(HOST=nhnaunxeodbp004-vip.goldlnk.rootlnka.net)(PORT=1532))
+            (CONNECT_DATA=
+                (SERVICE_NAME=ebs_USCEBSPR)
+                (INSTANCE_NAME=CUSCEBSPR0002)
+            )
+        )
+    )
+
+USCEBSDG.WORLD =
+  (DESCRIPTION =
+    (ADDRESS_LIST =
+      (ADDRESS = (PROTOCOL = TCP)(HOST = nhnaexaracpr04)(PORT = 1521))
+    )
+    (CONNECT_DATA =
+      (SERVER = dedicated)(SERVICE_NAME = USCEBSPR)
+    )
+  )

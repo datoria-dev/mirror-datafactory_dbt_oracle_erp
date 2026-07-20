@@ -1,0 +1,66 @@
+{
+  "source_workbook": "tableau/my-tableau-dashboards/Supplier Caused Mfg Defects.twbx",
+  "embedded_twb": "DEV Supplier Caused Mfg Defects.twb",
+  "primary_dashboard": "SCMD Rate Analysis Dashboard",
+  "dashboards": [
+    "SCMD Rate Analysis Dashboard"
+  ],
+  "worksheet_count": 5,
+  "datasource_count": 1,
+  "calculated_field_count": 2,
+  "lod_calculation_count": 0,
+  "table_calculation_count": 0,
+  "screenshot": null,
+  "likely_lineage_matches": [
+    {
+      "path": "models/4_marts/supplier_caused_defects.sql",
+      "score": 69.0,
+      "reason": "normalized substring; shared tokens: caused, defects, supplier"
+    },
+    {
+      "path": "models/3_intermediate/int_supplier_caused_defects.sql",
+      "score": 24.0,
+      "reason": "shared tokens: caused, defects, supplier"
+    },
+    {
+      "path": "models/4_marts/facts/fct_supplier_caused_defects.sql",
+      "score": 24.0,
+      "reason": "shared tokens: caused, defects, supplier"
+    },
+    {
+      "path": "models/4_marts/supplier_caused_defects__wip.sql",
+      "score": 24.0,
+      "reason": "shared tokens: caused, defects, supplier"
+    },
+    {
+      "path": "models/4_marts/supplier_defects_metric_daily.sql",
+      "score": 16.0,
+      "reason": "shared tokens: defects, supplier"
+    },
+    {
+      "path": "models/3_intermediate/int_move_trxns_dynamic_daily_rate.sql",
+      "score": 8.0,
+      "reason": "shared tokens: rate"
+    },
+    {
+      "path": "models/3_intermediate/int_move_trxns_dynamic_daily_rate_part2.sql",
+      "score": 8.0,
+      "reason": "shared tokens: rate"
+    },
+    {
+      "path": "models/4_marts/agg/agg_lead_time_analysis_median.sql",
+      "score": 8.0,
+      "reason": "shared tokens: analysis"
+    },
+    {
+      "path": "models/4_marts/agg/agg_lead_time_analysis_percent_complete.sql",
+      "score": 8.0,
+      "reason": "shared tokens: analysis"
+    },
+    {
+      "path": "models/4_marts/facts/fct_lead_time_analysis.sql",
+      "score": 8.0,
+      "reason": "shared tokens: analysis"
+    }
+  ]
+}

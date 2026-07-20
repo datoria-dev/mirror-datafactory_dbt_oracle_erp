@@ -1,0 +1,66 @@
+{
+  "source_workbook": "tableau/my-tableau-dashboards/Inventory Value Report.twbx",
+  "embedded_twb": "Inventory Value Report (1).twb",
+  "primary_dashboard": "Inventory Value Report",
+  "dashboards": [
+    "Inventory Value Report"
+  ],
+  "worksheet_count": 5,
+  "datasource_count": 1,
+  "calculated_field_count": 3,
+  "lod_calculation_count": 0,
+  "table_calculation_count": 1,
+  "screenshot": null,
+  "likely_lineage_matches": [
+    {
+      "path": "models/9_optimized_compiled_sql/midas_Inventory_Value_report.sql",
+      "score": 167.0,
+      "reason": "normalized substring; shared tokens: inventory, midas, report, value"
+    },
+    {
+      "path": "seeds/tabular_index_for_inventory_value_report.csv",
+      "score": 159.0,
+      "reason": "normalized substring; shared tokens: inventory, report, value"
+    },
+    {
+      "path": "models/9_optimized_compiled_sql/midas_Oracle_WIP_Value_Report.sql",
+      "score": 24.0,
+      "reason": "shared tokens: midas, report, value"
+    },
+    {
+      "path": "models/9_optimized_compiled_sql/midas_Inspection_Escape_Report_MIDAS.sql",
+      "score": 16.0,
+      "reason": "shared tokens: midas, report"
+    },
+    {
+      "path": "models/9_optimized_compiled_sql/midas_Material_Base_Report_YTD.sql",
+      "score": 16.0,
+      "reason": "shared tokens: midas, report"
+    },
+    {
+      "path": "seeds/nss_part_numbers_adhoc_for_midas.csv",
+      "score": 16.0,
+      "reason": "shared tokens: midas, nss"
+    },
+    {
+      "path": "models/1_sources/qa/xxsrc_qa_char_value_lookups.sql",
+      "score": 8.0,
+      "reason": "shared tokens: value"
+    },
+    {
+      "path": "models/1_sources/qa/xxsrc_qa_plan_char_value_lookups.sql",
+      "score": 8.0,
+      "reason": "shared tokens: value"
+    },
+    {
+      "path": "models/9_optimized_compiled_sql/Inspection_Escapes_Report_Modified.sql",
+      "score": 8.0,
+      "reason": "shared tokens: report"
+    },
+    {
+      "path": "models/9_optimized_compiled_sql/midas_AR_Processing.sql",
+      "score": 8.0,
+      "reason": "shared tokens: midas"
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "source_workbook": "tableau/my-tableau-dashboards/Lead Time Analysis Monthly.twbx",
+  "embedded_twb": "Lead Time Analysis Monthly.twb",
+  "primary_dashboard": "Histogram Lead Time Analysis Dashboard",
+  "dashboards": [
+    "Histogram Lead Time Analysis Dashboard",
+    "Lead Time Analysis Monthly Dashboard",
+    "Single Assembly Percent Complete within Lead Time"
+  ],
+  "worksheet_count": 12,
+  "datasource_count": 1,
+  "calculated_field_count": 4,
+  "lod_calculation_count": 0,
+  "table_calculation_count": 1,
+  "screenshot": "docs/tableau_workbook_analysis/lead-time-analysis-monthly/Histogram-Lead-Time-Analysis-Dashboard.jpeg",
+  "likely_lineage_matches": [
+    {
+      "path": "models/4_marts/lead_times_analysis_final.sql",
+      "score": 77.0,
+      "reason": "normalized substring; shared tokens: analysis, final, lead, times"
+    },
+    {
+      "path": "models/4_marts/item_program_details.sql",
+      "score": 69.0,
+      "reason": "normalized substring; shared tokens: details, item, program"
+    },
+    {
+      "path": "models/4_marts/agg/agg_lead_time_analysis_percent_complete.sql",
+      "score": 40.0,
+      "reason": "shared tokens: analysis, complete, lead, percent, time"
+    },
+    {
+      "path": "models/3_intermediate/int_item_program_details.sql",
+      "score": 24.0,
+      "reason": "shared tokens: details, item, program"
+    },
+    {
+      "path": "models/4_marts/agg/agg_lead_time_analysis_median.sql",
+      "score": 24.0,
+      "reason": "shared tokens: analysis, lead, time"
+    },
+    {
+      "path": "models/4_marts/facts/fct_lead_time_analysis.sql",
+      "score": 24.0,
+      "reason": "shared tokens: analysis, lead, time"
+    },
+    {
+      "path": "models/4_marts/lead_times_analysis_full7day_week.sql",
+      "score": 24.0,
+      "reason": "shared tokens: analysis, lead, times"
+    },
+    {
+      "path": "models/4_marts/lead_times_analysis_workingdays_week.sql",
+      "score": 24.0,
+      "reason": "shared tokens: analysis, lead, times"
+    },
+    {
+      "path": "models/99_oracle_sql_dev/item_program_details_tableau_prep_formatted.sql",
+      "score": 24.0,
+      "reason": "shared tokens: details, item, program"
+    },
+    {
+      "path": "seeds/item_program_details__nss_ops_part_numbers_and_domains.csv",
+      "score": 24.0,
+      "reason": "shared tokens: details, item, program"
+    }
+  ]
+}

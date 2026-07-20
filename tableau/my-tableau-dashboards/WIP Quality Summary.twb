@@ -1,0 +1,1505 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20251.26.0403.1044                               -->
+<workbook original-version='18.1' source-build='2024.2.5 (20242.24.1112.0335)' source-platform='win' version='18.1' xml:base='https://tableauanalytics.us.baesystems.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <BasicButtonObject />
+    <BasicButtonObjectTextSupport />
+    <DashboardExportButton />
+    <DashboardExportButtonCrosstab />
+    <ISO8601DefaultCalendarPref />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <WindowsPersistSimpleIdentifiers />
+    <ZoneBackgroundTransparency />
+  </document-format-change-manifest>
+  <repository-location derived-from='https://tableauanalytics.us.baesystems.com/t/ES/workbooks/WIPQualitySummary?rev=4.5' id='WIPQualitySummary' path='/t/ES/workbooks' revision='4.5' site='ES' />
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <style-theme name='modern' />
+  <datasources>
+    <datasource caption='wip_quality_summary_quality' inline='true' name='sqlproxy.07la4s11pwtkes1c9rhj70zzexzy' version='18.1'>
+      <repository-location derived-from='https://tableauanalytics.us.baesystems.com/t/ES/datasources/wip_quality_summary_quality?rev=1.3' id='wip_quality_summary_quality' path='/t/ES/datasources' revision='4.5' site='ES' />
+      <connection channel='https' class='sqlproxy' dbname='wip_quality_summary_quality' directory='/dataserver' port='443' server='tableauanalytics.us.baesystems.com' server-oauth='' username='' workgroup-auth-mode='prompt'>
+        <relation name='sqlproxy' table='[sqlproxy]' type='table' />
+        <calculations>
+          <calculation column='[Calculation_2433069706516979712]' formula='STR([RR_FROM_OP_SEQ_NUM]) + &apos;_&apos; + STR([RR_ITEM_ID])' />
+        </calculations>
+        <metadata-records>
+          <metadata-record class='measure'>
+            <remote-name>COUNT_SERIAL_NUMBER</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[COUNT_SERIAL_NUMBER]</local-name>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias>COUNT_SERIAL_NUMBER</remote-alias>
+            <ordinal>3</ordinal>
+            <layered>true</layered>
+            <family>Custom SQL Query</family>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='field-type'>0</attribute>
+            </attributes>
+            <object-id>[_9CA22FB3342745889FF1FA054570347B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Calculation_2433069706516979712</remote-name>
+            <remote-type>-1</remote-type>
+            <local-name>[Calculation_2433069706516979712]</local-name>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias>Calculation_2433069706516979712</remote-alias>
+            <ordinal>8</ordinal>
+            <layered>true</layered>
+            <caption>wip_qual_summary_qual_sk</caption>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='integer' name='field-type'>2</attribute>
+              <attribute datatype='string' name='formula'>&quot;STR([RR_FROM_OP_SEQ_NUM]) + &apos;_&apos; + STR([RR_ITEM_ID])&quot;</attribute>
+              <attribute datatype='integer' name='role'>0</attribute>
+            </attributes>
+            <object-id>[_9CA22FB3342745889FF1FA054570347B]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>FEATURE</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[FEATURE]</local-name>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias>FEATURE</remote-alias>
+            <ordinal>0</ordinal>
+            <layered>true</layered>
+            <family>Custom SQL Query</family>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='integer' name='field-type'>2</attribute>
+              <attribute datatype='integer' name='role'>0</attribute>
+            </attributes>
+            <object-id>[_9CA22FB3342745889FF1FA054570347B]</object-id>
+          </metadata-record>
+          <metadata-record class='measure'>
+            <remote-name>RR_FROM_OP_SEQ_NUM</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[RR_FROM_OP_SEQ_NUM]</local-name>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias>RR_FROM_OP_SEQ_NUM</remote-alias>
+            <ordinal>2</ordinal>
+            <layered>true</layered>
+            <family>Custom SQL Query</family>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='field-type'>0</attribute>
+            </attributes>
+            <object-id>[_9CA22FB3342745889FF1FA054570347B]</object-id>
+          </metadata-record>
+          <metadata-record class='measure'>
+            <remote-name>RR_ITEM_ID</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[RR_ITEM_ID]</local-name>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias>RR_ITEM_ID</remote-alias>
+            <ordinal>1</ordinal>
+            <layered>true</layered>
+            <family>Custom SQL Query</family>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='field-type'>0</attribute>
+            </attributes>
+            <object-id>[_9CA22FB3342745889FF1FA054570347B]</object-id>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='boolean' name='CAP_CREATE_TEMP_TABLES'>true</attribute>
+              <attribute datatype='boolean' name='CAP_QUERY_BLENDING_ALWAYS_USE_LOCAL_MAPPING_TABLES'>false</attribute>
+              <attribute datatype='boolean' name='CAP_QUERY_BLENDING_PREFER_LOCAL_MAPPING_TABLES'>true</attribute>
+              <attribute datatype='boolean' name='CAP_QUERY_BLENDING_REMOTE_MAPPING_TABLES'>true</attribute>
+              <attribute datatype='boolean' name='CAP_QUERY_CASE_INSENSITIVE_CONTAINS'>true</attribute>
+              <attribute datatype='boolean' name='CAP_QUERY_IGNORE_HINT_CHECK_NOT_NULL'>true</attribute>
+              <attribute datatype='boolean' name='CAP_QUERY_SORT_BY'>true</attribute>
+              <attribute datatype='boolean' name='CAP_QUERY_SUBQUERIES'>true</attribute>
+              <attribute datatype='boolean' name='CAP_QUERY_SUBQUERY_QUERY_CONTEXT'>true</attribute>
+              <attribute datatype='boolean' name='CAP_QUERY_SUPPORTS_LODJOINS'>true</attribute>
+              <attribute datatype='boolean' name='CAP_QUERY_SUPPORT_ANALYTIC_FUNCTIONS'>true</attribute>
+              <attribute datatype='boolean' name='CAP_QUERY_TOP_N'>true</attribute>
+              <attribute datatype='boolean' name='CAP_QUERY_USE_QUERY_FUSION'>true</attribute>
+              <attribute datatype='boolean' name='CAP_SUPPORTS_SPLIT_FROM_LEFT'>true</attribute>
+              <attribute datatype='boolean' name='CAP_SUPPORTS_SPLIT_FROM_RIGHT'>true</attribute>
+              <attribute datatype='integer' name='charset'>0</attribute>
+              <attribute datatype='string' name='collation'>&quot;binary&quot;</attribute>
+              <attribute datatype='string' name='datasource'>&quot;<![CDATA[<?xml version='1.0' encoding='utf-8' ?>
+
+<datasource :source-version='18.1' formatted-name='wip_quality_summary_quality (local copy)' inline='true' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+  </document-format-change-manifest>
+  <repository-location derived-from='/t/ES/datasources/wip_quality_summary_quality?rev=1.3' id='wip_quality_summary_quality' path='/t/ES/datasources' revision='4.5' site='ES' />
+  <connection channel='https' class='sqlproxy' dbname='wip_quality_summary_quality' directory='/dataserver' port='443' server='tableauanalytics.us.baesystems.com'>
+    <relation name='sqlproxy' table='[sqlproxy]' type='table' />
+    <cols>
+      <map key='[COUNT_SERIAL_NUMBER]' value='[sqlproxy].[COUNT_SERIAL_NUMBER]' />
+      <map key='[Calculation_2433069706516979712]' value='[sqlproxy].[Calculation_2433069706516979712]' />
+      <map key='[FEATURE]' value='[sqlproxy].[FEATURE]' />
+      <map key='[RR_FROM_OP_SEQ_NUM]' value='[sqlproxy].[RR_FROM_OP_SEQ_NUM]' />
+      <map key='[RR_ITEM_ID]' value='[sqlproxy].[RR_ITEM_ID]' />
+    </cols>
+  </connection>
+  <aliases enabled='yes' />
+  <column aggregation='Count' caption='wip_qual_summary_qual_sk' datatype='string' default-type='nominal' name='[Calculation_2433069706516979712]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default'>
+    <calculation class='tableau' formula='STR([RR_FROM_OP_SEQ_NUM]) + &apos;_&apos; + STR([RR_ITEM_ID])' />
+  </column>
+  <column aggregation='Sum' caption='Total' datatype='real' default-format='n\#,\#\#0;-\#,\#\#0' default-type='quantitative' name='[Calculation_2616028440642244613]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default'>
+    <calculation class='tableau' formula='SUM([sqlproxy.0a8sqpr06n70y51aboa451fwlhnr].[Op Qty in Queue])-[Calculation_969399827125456896]-[Calculation_969399827125456896 1]'>
+      <table-calc ordering-type='Rows' />
+    </calculation>
+  </column>
+  <column aggregation='User' caption='Reroutes' datatype='real' default-format='n\#,\#\#0;-\#,\#\#0' default-type='quantitative' name='[Calculation_969399827125456896 1]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default'>
+    <calculation class='tableau' formula='ZN(LOOKUP(SUM(IF [FEATURE] = &apos;Reroutes&apos; THEN [COUNT_SERIAL_NUMBER] ELSE NULL END),0))'>
+      <table-calc ordering-type='Rows' />
+    </calculation>
+  </column>
+  <column aggregation='User' caption='Rejects' datatype='real' default-format='n\#,\#\#0;-\#,\#\#0' default-type='quantitative' name='[Calculation_969399827125456896]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default'>
+    <calculation class='tableau' formula='ZN(LOOKUP(SUM(IF [FEATURE] = &apos;Rejects&apos; THEN [COUNT_SERIAL_NUMBER] ELSE NULL END),0))'>
+      <table-calc ordering-type='Rows' />
+    </calculation>
+  </column>
+  <column aggregation='Count' caption='wip_quality_summary_quality' datatype='table' default-type='quantitative' name='[__tableau_internal_object_id__].[_9CA22FB3342745889FF1FA054570347B]' pivot='key' role='measure' type='quantitative' user-datatype='table' visual-totals='Default' />
+  <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+  <semantic-values>
+    <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+  </semantic-values>
+  <object-graph>
+    <objects>
+      <object caption='wip_quality_summary_quality' id='_9CA22FB3342745889FF1FA054570347B'>
+        <properties context=''>
+          <relation name='sqlproxy' table='[sqlproxy]' type='table' />
+        </properties>
+      </object>
+    </objects>
+  </object-graph>
+</datasource>
+]]>&quot;</attribute>
+              <attribute datatype='string' name='dialect-definition'>&quot;<![CDATA[<dialect-definition>
+  <primary-dialect class='hyper' version='0.0.0'>
+  </primary-dialect>
+</dialect-definition>
+]]>&quot;</attribute>
+              <attribute datatype='boolean' name='extract-active'>true</attribute>
+              <attribute datatype='boolean' name='fast-get-server-time'>true</attribute>
+              <attribute datatype='string' name='update-time'>&quot;6/19/2025 9:17:15 AM&quot;</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <overridable-settings>
+        <date-options fiscal-year-start='january' start-of-week='sunday' />
+        <default-date-format />
+        <default-calendar-type>Gregorian</default-calendar-type>
+      </overridable-settings>
+      <aliases enabled='yes' />
+      <column aggregation='Sum' datatype='real' default-type='quantitative' layered='true' name='[COUNT_SERIAL_NUMBER]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default' />
+      <column aggregation='Count' caption='wip_qual_summary_qual_sk' datatype='string' default-type='nominal' layered='true' name='[Calculation_2433069706516979712]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default'>
+        <calculation class='tableau' formula='STR([RR_FROM_OP_SEQ_NUM]) + &apos;_&apos; + STR([RR_ITEM_ID])' />
+      </column>
+      <column aggregation='User' caption='Total' datatype='real' default-format='n#,##0;-#,##0' default-type='quantitative' layered='true' name='[Calculation_2616028440642244613]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default'>
+        <calculation class='tableau' formula='SUM([sqlproxy.0a8sqpr06n70y51aboa451fwlhnr].[Op Qty in Queue])-[Calculation_969399827125456896]-[Calculation_969399827125456896 1]'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column aggregation='User' caption='Reroutes' datatype='real' default-format='n#,##0;-#,##0' default-type='quantitative' layered='true' name='[Calculation_969399827125456896 1]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default'>
+        <calculation class='tableau' formula='ZN(LOOKUP(SUM(IF [FEATURE] = &apos;Reroutes&apos; THEN [COUNT_SERIAL_NUMBER] ELSE NULL END),0))'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column aggregation='User' caption='Rejects' datatype='real' default-format='n#,##0;-#,##0' default-type='quantitative' layered='true' name='[Calculation_969399827125456896]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default'>
+        <calculation class='tableau' formula='ZN(LOOKUP(SUM(IF [FEATURE] = &apos;Rejects&apos; THEN [COUNT_SERIAL_NUMBER] ELSE NULL END),0))'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[FEATURE]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+      <column aggregation='Sum' datatype='real' default-type='quantitative' layered='true' name='[RR_FROM_OP_SEQ_NUM]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default' />
+      <column aggregation='Sum' datatype='real' default-type='quantitative' layered='true' name='[RR_ITEM_ID]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default' />
+      <column aggregation='Count' caption='wip_quality_summary_quality' datatype='table' default-type='quantitative' layered='true' name='[__tableau_internal_object_id__].[_9CA22FB3342745889FF1FA054570347B]' pivot='key' role='measure' type='quantitative' user-datatype='table' visual-totals='Default' />
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <datasource-dependencies datasource='sqlproxy.0a8sqpr06n70y51aboa451fwlhnr'>
+        <column aggregation='Sum' datatype='real' default-format='n#,##0;-#,##0' default-type='quantitative' layered='true' name='[Op Qty in Queue]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default' />
+      </datasource-dependencies>
+      <object-graph>
+        <objects>
+          <object caption='wip_quality_summary_quality' id='_9CA22FB3342745889FF1FA054570347B'>
+            <properties context=''>
+              <relation name='sqlproxy' table='[sqlproxy]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='minus_wip_quality_summary_wip' inline='true' name='sqlproxy.0a8sqpr06n70y51aboa451fwlhnr' version='18.1'>
+      <repository-location derived-from='https://tableauanalytics.us.baesystems.com/t/ES/datasources/minus_wip_quality_summary_wip?rev=1.2' id='minus_wip_quality_summary_wip' path='/t/ES/datasources' revision='4.5' site='ES' />
+      <connection channel='https' class='sqlproxy' dbname='minus_wip_quality_summary_wip' directory='/dataserver' port='443' server='tableauanalytics.us.baesystems.com' server-oauth='' username='' workgroup-auth-mode='prompt'>
+        <relation name='sqlproxy' table='[sqlproxy]' type='table' />
+        <calculations>
+          <calculation column='[Calculation_2324420365506445312]' formula='STR([Op Seq Num]) + &apos;_&apos; + STR([wdj_primary_item_id])' />
+        </calculations>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>Calculation_2324420365506445312</remote-name>
+            <remote-type>-1</remote-type>
+            <local-name>[Calculation_2324420365506445312]</local-name>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias>Calculation_2324420365506445312</remote-alias>
+            <ordinal>17</ordinal>
+            <layered>true</layered>
+            <caption>wip_qual_summary_wip_sk</caption>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LROOT' />
+            <attributes>
+              <attribute datatype='integer' name='field-type'>2</attribute>
+              <attribute datatype='string' name='formula'>&quot;STR([Op Seq Num]) + &apos;_&apos; + STR([wdj_primary_item_id])&quot;</attribute>
+              <attribute datatype='integer' name='role'>0</attribute>
+            </attributes>
+            <object-id>[_2A9CA5797EC444F98A3C3073E9DBD9A6]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Job Class Code</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Job Class Code]</local-name>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias>Job Class Code</remote-alias>
+            <ordinal>11</ordinal>
+            <layered>true</layered>
+            <family>minus_wip_quality_summary_wip</family>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>10</width>
+            <contains-null>false</contains-null>
+            <collation charset='1' flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='integer' name='field-type'>2</attribute>
+              <attribute datatype='integer' name='role'>0</attribute>
+            </attributes>
+            <object-id>[_2A9CA5797EC444F98A3C3073E9DBD9A6]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Job Number</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Job Number]</local-name>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias>Job Number</remote-alias>
+            <ordinal>3</ordinal>
+            <layered>true</layered>
+            <family>minus_wip_quality_summary_wip</family>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>240</width>
+            <contains-null>false</contains-null>
+            <collation charset='1' flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='integer' name='field-type'>2</attribute>
+              <attribute datatype='integer' name='role'>0</attribute>
+            </attributes>
+            <object-id>[_2A9CA5797EC444F98A3C3073E9DBD9A6]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Job Scheduled Start Date</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[Job Scheduled Start Date]</local-name>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias>Job Scheduled Start Date</remote-alias>
+            <ordinal>10</ordinal>
+            <layered>true</layered>
+            <family>minus_wip_quality_summary_wip</family>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='field-type'>1</attribute>
+              <attribute datatype='integer' name='role'>0</attribute>
+            </attributes>
+            <object-id>[_2A9CA5797EC444F98A3C3073E9DBD9A6]</object-id>
+          </metadata-record>
+          <metadata-record class='measure'>
+            <remote-name>Line Number</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[Line Number]</local-name>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias>Line Number</remote-alias>
+            <ordinal>7</ordinal>
+            <layered>true</layered>
+            <family>minus_wip_quality_summary_wip</family>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <scale>-127</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='field-type'>0</attribute>
+            </attributes>
+            <object-id>[_2A9CA5797EC444F98A3C3073E9DBD9A6]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Op Desc</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Op Desc]</local-name>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias>Op Desc</remote-alias>
+            <ordinal>5</ordinal>
+            <layered>true</layered>
+            <family>minus_wip_quality_summary_wip</family>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>240</width>
+            <contains-null>true</contains-null>
+            <collation charset='1' flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='integer' name='field-type'>2</attribute>
+              <attribute datatype='integer' name='role'>0</attribute>
+            </attributes>
+            <object-id>[_2A9CA5797EC444F98A3C3073E9DBD9A6]</object-id>
+          </metadata-record>
+          <metadata-record class='measure'>
+            <remote-name>Op Qty in Queue</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[Op Qty in Queue]</local-name>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias>Op Qty in Queue</remote-alias>
+            <ordinal>8</ordinal>
+            <layered>true</layered>
+            <family>minus_wip_quality_summary_wip</family>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <scale>-127</scale>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='field-type'>0</attribute>
+            </attributes>
+            <object-id>[_2A9CA5797EC444F98A3C3073E9DBD9A6]</object-id>
+          </metadata-record>
+          <metadata-record class='measure'>
+            <remote-name>Op Seq Num</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[Op Seq Num]</local-name>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias>Op Seq Num</remote-alias>
+            <ordinal>4</ordinal>
+            <layered>true</layered>
+            <family>minus_wip_quality_summary_wip</family>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <scale>-127</scale>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='field-type'>0</attribute>
+            </attributes>
+            <object-id>[_2A9CA5797EC444F98A3C3073E9DBD9A6]</object-id>
+          </metadata-record>
+          <metadata-record class='measure'>
+            <remote-name>Op To Move</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[Op To Move]</local-name>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias>Op To Move</remote-alias>
+            <ordinal>9</ordinal>
+            <layered>true</layered>
+            <family>minus_wip_quality_summary_wip</family>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <scale>-127</scale>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='field-type'>0</attribute>
+            </attributes>
+            <object-id>[_2A9CA5797EC444F98A3C3073E9DBD9A6]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Part Number</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Part Number]</local-name>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias>Part Number</remote-alias>
+            <ordinal>2</ordinal>
+            <layered>true</layered>
+            <family>minus_wip_quality_summary_wip</family>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>40</width>
+            <contains-null>true</contains-null>
+            <collation charset='1' flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='integer' name='field-type'>2</attribute>
+              <attribute datatype='integer' name='role'>0</attribute>
+            </attributes>
+            <object-id>[_2A9CA5797EC444F98A3C3073E9DBD9A6]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Planner</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Planner]</local-name>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias>Planner</remote-alias>
+            <ordinal>1</ordinal>
+            <layered>true</layered>
+            <family>minus_wip_quality_summary_wip</family>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>50</width>
+            <contains-null>true</contains-null>
+            <collation charset='1' flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='integer' name='field-type'>2</attribute>
+              <attribute datatype='integer' name='role'>0</attribute>
+            </attributes>
+            <object-id>[_2A9CA5797EC444F98A3C3073E9DBD9A6]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>STG_WOP_WE_WDJ_SURROGATE_KEY</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[STG_WOP_WE_WDJ_SURROGATE_KEY]</local-name>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias>STG_WOP_WE_WDJ_SURROGATE_KEY</remote-alias>
+            <ordinal>14</ordinal>
+            <layered>true</layered>
+            <family>minus_wip_quality_summary_wip</family>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>16</width>
+            <contains-null>true</contains-null>
+            <collation charset='1' flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='integer' name='field-type'>2</attribute>
+              <attribute datatype='integer' name='role'>0</attribute>
+            </attributes>
+            <object-id>[_2A9CA5797EC444F98A3C3073E9DBD9A6]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Sales Order</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Sales Order]</local-name>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias>Sales Order</remote-alias>
+            <ordinal>6</ordinal>
+            <layered>true</layered>
+            <family>minus_wip_quality_summary_wip</family>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>40</width>
+            <contains-null>true</contains-null>
+            <collation charset='1' flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='integer' name='field-type'>2</attribute>
+              <attribute datatype='integer' name='role'>0</attribute>
+            </attributes>
+            <object-id>[_2A9CA5797EC444F98A3C3073E9DBD9A6]</object-id>
+          </metadata-record>
+          <metadata-record class='measure'>
+            <remote-name>wdj_primary_item_id</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[wdj_primary_item_id]</local-name>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias>wdj_primary_item_id</remote-alias>
+            <ordinal>12</ordinal>
+            <layered>true</layered>
+            <family>minus_wip_quality_summary_wip</family>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <scale>-127</scale>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='field-type'>0</attribute>
+            </attributes>
+            <object-id>[_2A9CA5797EC444F98A3C3073E9DBD9A6]</object-id>
+          </metadata-record>
+          <metadata-record class='measure'>
+            <remote-name>we_wip_entity_id</remote-name>
+            <remote-type>131</remote-type>
+            <local-name>[we_wip_entity_id]</local-name>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias>we_wip_entity_id</remote-alias>
+            <ordinal>13</ordinal>
+            <layered>true</layered>
+            <family>minus_wip_quality_summary_wip</family>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <scale>-127</scale>
+            <contains-null>false</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='field-type'>0</attribute>
+            </attributes>
+            <object-id>[_2A9CA5797EC444F98A3C3073E9DBD9A6]</object-id>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[sqlproxy]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='boolean' name='CAP_QUERY_BLENDING_ALWAYS_USE_LOCAL_MAPPING_TABLES'>false</attribute>
+              <attribute datatype='boolean' name='CAP_QUERY_BLENDING_PREFER_LOCAL_MAPPING_TABLES'>true</attribute>
+              <attribute datatype='boolean' name='CAP_QUERY_BLENDING_REMOTE_MAPPING_TABLES'>false</attribute>
+              <attribute datatype='boolean' name='CAP_QUERY_SORT_BY'>true</attribute>
+              <attribute datatype='boolean' name='CAP_QUERY_SUBQUERIES'>true</attribute>
+              <attribute datatype='boolean' name='CAP_QUERY_SUBQUERY_QUERY_CONTEXT'>true</attribute>
+              <attribute datatype='boolean' name='CAP_QUERY_SUPPORTS_LODJOINS'>true</attribute>
+              <attribute datatype='boolean' name='CAP_QUERY_SUPPORT_ANALYTIC_FUNCTIONS'>true</attribute>
+              <attribute datatype='boolean' name='CAP_QUERY_TOP_N'>true</attribute>
+              <attribute datatype='boolean' name='CAP_QUERY_USE_QUERY_FUSION'>true</attribute>
+              <attribute datatype='boolean' name='CAP_SUPPORTS_SPLIT_FROM_LEFT'>true</attribute>
+              <attribute datatype='integer' name='charset'>0</attribute>
+              <attribute datatype='string' name='collation'>&quot;LROOT&quot;</attribute>
+              <attribute datatype='string' name='datasource'>&quot;<![CDATA[<?xml version='1.0' encoding='utf-8' ?>
+
+<datasource :source-version='18.1' formatted-name='minus_wip_quality_summary_wip (2) (local copy)' inline='true' version='18.1' xml:base='https://tableauanalytics.us.baesystems.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+  </document-format-change-manifest>
+  <repository-location derived-from='https://tableauanalytics.us.baesystems.com/t/ES/datasources/minus_wip_quality_summary_wip?rev=1.2' id='minus_wip_quality_summary_wip' path='/t/ES/datasources' revision='4.5' site='ES' />
+  <connection channel='https' class='sqlproxy' dbname='minus_wip_quality_summary_wip' directory='/dataserver' port='443' server='tableauanalytics.us.baesystems.com'>
+    <relation name='sqlproxy' table='[sqlproxy]' type='table' />
+    <cols>
+      <map key='[Calculation_2324420365506445312]' value='[sqlproxy].[Calculation_2324420365506445312]' />
+      <map key='[Job Class Code]' value='[sqlproxy].[Job Class Code]' />
+      <map key='[Job Number]' value='[sqlproxy].[Job Number]' />
+      <map key='[Job Scheduled Start Date]' value='[sqlproxy].[Job Scheduled Start Date]' />
+      <map key='[Line Number]' value='[sqlproxy].[Line Number]' />
+      <map key='[Op Desc]' value='[sqlproxy].[Op Desc]' />
+      <map key='[Op Qty in Queue]' value='[sqlproxy].[Op Qty in Queue]' />
+      <map key='[Op Seq Num]' value='[sqlproxy].[Op Seq Num]' />
+      <map key='[Op To Move]' value='[sqlproxy].[Op To Move]' />
+      <map key='[Part Number]' value='[sqlproxy].[Part Number]' />
+      <map key='[Planner]' value='[sqlproxy].[Planner]' />
+      <map key='[STG_WOP_WE_WDJ_SURROGATE_KEY]' value='[sqlproxy].[STG_WOP_WE_WDJ_SURROGATE_KEY]' />
+      <map key='[Sales Order]' value='[sqlproxy].[Sales Order]' />
+      <map key='[wdj_primary_item_id]' value='[sqlproxy].[wdj_primary_item_id]' />
+      <map key='[we_wip_entity_id]' value='[sqlproxy].[we_wip_entity_id]' />
+    </cols>
+  </connection>
+  <aliases enabled='yes' />
+  <column aggregation='Count' caption='wip_qual_summary_wip_sk' datatype='string' default-type='nominal' name='[Calculation_2324420365506445312]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default'>
+    <calculation class='tableau' formula='STR([Op Seq Num]) + &apos;_&apos; + STR([wdj_primary_item_id])' />
+  </column>
+  <column aggregation='Count' caption='minus_wip_quality_summary_wip' datatype='table' default-type='quantitative' name='[__tableau_internal_object_id__].[_2A9CA5797EC444F98A3C3073E9DBD9A6]' pivot='key' role='measure' type='quantitative' user-datatype='table' visual-totals='Default' />
+  <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+  <semantic-values>
+    <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+  </semantic-values>
+  <object-graph>
+    <objects>
+      <object caption='minus_wip_quality_summary_wip' id='_2A9CA5797EC444F98A3C3073E9DBD9A6'>
+        <properties context=''>
+          <relation name='sqlproxy' table='[sqlproxy]' type='table' />
+        </properties>
+      </object>
+    </objects>
+  </object-graph>
+</datasource>
+]]>&quot;</attribute>
+              <attribute datatype='string' name='dialect-definition'>&quot;<![CDATA[<dialect-definition>
+  <primary-dialect class='oracle' version='10.2.0'>
+  </primary-dialect>
+  <overlay-dialect-set>
+    <overlay-dialect class='vizengine' version='0.1.0'>
+    </overlay-dialect>
+  </overlay-dialect-set>
+</dialect-definition>
+]]>&quot;</attribute>
+              <attribute datatype='boolean' name='extract-active'>false</attribute>
+              <attribute datatype='boolean' name='fast-get-server-time'>true</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <overridable-settings>
+        <date-options fiscal-year-start='january' start-of-week='sunday' />
+        <default-date-format />
+        <default-calendar-type>Gregorian</default-calendar-type>
+      </overridable-settings>
+      <aliases enabled='yes' />
+      <column datatype='string' name='[:Measure Names]' role='dimension' type='nominal'>
+        <aliases>
+          <alias key='&quot;[sqlproxy.07la4s11pwtkes1c9rhj70zzexzy].[usr:Calculation_2616028440642244613:qk:2]&quot;' value='Total' />
+          <alias key='&quot;[sqlproxy.07la4s11pwtkes1c9rhj70zzexzy].[usr:Calculation_969399827125456896 1:qk:1]&quot;' value='Reroutes' />
+          <alias key='&quot;[sqlproxy.07la4s11pwtkes1c9rhj70zzexzy].[usr:Calculation_969399827125456896:qk:1]&quot;' value='Rejects' />
+        </aliases>
+      </column>
+      <column aggregation='Count' caption='wip_qual_summary_wip_sk' datatype='string' default-type='nominal' layered='true' name='[Calculation_2324420365506445312]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default'>
+        <calculation class='tableau' formula='STR([Op Seq Num]) + &apos;_&apos; + STR([wdj_primary_item_id])' />
+      </column>
+      <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[Job Class Code]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+      <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[Job Number]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+      <column aggregation='Year' datatype='datetime' default-type='ordinal' layered='true' name='[Job Scheduled Start Date]' pivot='key' role='dimension' type='ordinal' user-datatype='datetime' visual-totals='Default' />
+      <column aggregation='Sum' datatype='real' default-type='ordinal' layered='true' name='[Line Number]' pivot='key' role='dimension' type='ordinal' user-datatype='real' visual-totals='Default' />
+      <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[Op Desc]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+      <column aggregation='Sum' datatype='real' default-format='n#,##0;-#,##0' default-type='quantitative' layered='true' name='[Op Qty in Queue]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default' />
+      <column aggregation='Sum' datatype='real' default-type='ordinal' layered='true' name='[Op Seq Num]' pivot='key' role='dimension' type='ordinal' user-datatype='real' visual-totals='Default' />
+      <column aggregation='Sum' datatype='real' default-format='n#,##0;-#,##0' default-type='quantitative' layered='true' name='[Op To Move]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default' />
+      <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[Part Number]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+      <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[Planner]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+      <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[STG_WOP_WE_WDJ_SURROGATE_KEY]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+      <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[Sales Order]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+      <column aggregation='Count' caption='minus_wip_quality_summary_wip' datatype='table' default-type='quantitative' layered='true' name='[__tableau_internal_object_id__].[_2A9CA5797EC444F98A3C3073E9DBD9A6]' pivot='key' role='measure' type='quantitative' user-datatype='table' visual-totals='Default' />
+      <column aggregation='Sum' datatype='real' default-type='quantitative' layered='true' name='[wdj_primary_item_id]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default' />
+      <column aggregation='Sum' datatype='real' default-type='quantitative' layered='true' name='[we_wip_entity_id]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default' />
+      <column-instance column='[Op Qty in Queue]' derivation='Sum' name='[sum:Op Qty in Queue:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Op To Move]' derivation='Sum' name='[sum:Op To Move:qk]' pivot='key' type='quantitative' />
+      <drill-paths>
+        <drill-path name='Op Desc, Op Seq Num'>
+          <field>[Op Seq Num]</field>
+          <field>[Op Desc]</field>
+        </drill-path>
+        <drill-path name='Part Number, Planner'>
+          <field>[Planner]</field>
+          <field>[Part Number]</field>
+        </drill-path>
+      </drill-paths>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#1f77b4'>
+              <bucket>&quot;[sqlproxy.0a8sqpr06n70y51aboa451fwlhnr].[sum:Op Qty in Queue:qk]&quot;</bucket>
+            </map>
+            <map to='#2ca02c'>
+              <bucket>&quot;[sqlproxy.07la4s11pwtkes1c9rhj70zzexzy].[usr:Calculation_2616028440642244613:qk:2]&quot;</bucket>
+            </map>
+            <map to='#7f7f7f'>
+              <bucket>&quot;[sqlproxy.0a8sqpr06n70y51aboa451fwlhnr].[sum:Op To Move:qk]&quot;</bucket>
+            </map>
+            <map to='#d62728'>
+              <bucket>&quot;[sqlproxy.07la4s11pwtkes1c9rhj70zzexzy].[usr:Calculation_969399827125456896:qk:1]&quot;</bucket>
+            </map>
+            <map to='#ff7f0e'>
+              <bucket>&quot;[sqlproxy.07la4s11pwtkes1c9rhj70zzexzy].[usr:Calculation_969399827125456896 1:qk:1]&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <datasource-dependencies datasource='sqlproxy.07la4s11pwtkes1c9rhj70zzexzy'>
+        <column aggregation='User' caption='Total' datatype='real' default-format='n#,##0;-#,##0' default-type='quantitative' layered='true' name='[Calculation_2616028440642244613]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default'>
+          <calculation class='tableau' formula='SUM([sqlproxy.0a8sqpr06n70y51aboa451fwlhnr].[Op Qty in Queue])-[Calculation_969399827125456896]-[Calculation_969399827125456896 1]'>
+            <table-calc ordering-type='Rows' />
+          </calculation>
+        </column>
+        <column aggregation='User' caption='Reroutes' datatype='real' default-format='n#,##0;-#,##0' default-type='quantitative' layered='true' name='[Calculation_969399827125456896 1]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default'>
+          <calculation class='tableau' formula='ZN(LOOKUP(SUM(IF [FEATURE] = &apos;Reroutes&apos; THEN [COUNT_SERIAL_NUMBER] ELSE NULL END),0))'>
+            <table-calc ordering-type='Rows' />
+          </calculation>
+        </column>
+        <column aggregation='User' caption='Rejects' datatype='real' default-format='n#,##0;-#,##0' default-type='quantitative' layered='true' name='[Calculation_969399827125456896]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default'>
+          <calculation class='tableau' formula='ZN(LOOKUP(SUM(IF [FEATURE] = &apos;Rejects&apos; THEN [COUNT_SERIAL_NUMBER] ELSE NULL END),0))'>
+            <table-calc ordering-type='Rows' />
+          </calculation>
+        </column>
+        <column-instance column='[Calculation_2616028440642244613]' derivation='User' name='[usr:Calculation_2616028440642244613:qk:2]' pivot='key' type='quantitative'>
+          <table-calc ordering-type='Columns' />
+          <table-calc field='[sqlproxy.07la4s11pwtkes1c9rhj70zzexzy].[Calculation_969399827125456896]' ordering-type='Columns' />
+          <table-calc field='[sqlproxy.07la4s11pwtkes1c9rhj70zzexzy].[Calculation_969399827125456896 1]' ordering-type='Columns' />
+        </column-instance>
+        <column-instance column='[Calculation_969399827125456896 1]' derivation='User' name='[usr:Calculation_969399827125456896 1:qk:1]' pivot='key' type='quantitative'>
+          <table-calc ordering-type='Columns' />
+        </column-instance>
+        <column-instance column='[Calculation_969399827125456896]' derivation='User' name='[usr:Calculation_969399827125456896:qk:1]' pivot='key' type='quantitative'>
+          <table-calc ordering-type='Columns' />
+        </column-instance>
+      </datasource-dependencies>
+      <object-graph>
+        <objects>
+          <object caption='minus_wip_quality_summary_wip' id='_2A9CA5797EC444F98A3C3073E9DBD9A6'>
+            <properties context=''>
+              <relation name='sqlproxy' table='[sqlproxy]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <datasource-relationships>
+    <datasource-dependencies datasource='sqlproxy.07la4s11pwtkes1c9rhj70zzexzy'>
+      <column aggregation='Count' caption='wip_qual_summary_qual_sk' datatype='string' default-type='nominal' layered='true' name='[Calculation_2433069706516979712]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default'>
+        <calculation class='tableau' formula='STR([RR_FROM_OP_SEQ_NUM]) + &apos;_&apos; + STR([RR_ITEM_ID])' />
+      </column>
+      <column-instance column='[Calculation_2433069706516979712]' derivation='None' name='[none:Calculation_2433069706516979712:nk]' pivot='key' type='nominal' />
+    </datasource-dependencies>
+    <datasource-dependencies datasource='sqlproxy.0a8sqpr06n70y51aboa451fwlhnr'>
+      <column aggregation='Count' caption='wip_qual_summary_wip_sk' datatype='string' default-type='nominal' layered='true' name='[Calculation_2324420365506445312]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default'>
+        <calculation class='tableau' formula='STR([Op Seq Num]) + &apos;_&apos; + STR([wdj_primary_item_id])' />
+      </column>
+      <column-instance column='[Calculation_2324420365506445312]' derivation='None' name='[none:Calculation_2324420365506445312:nk]' pivot='key' type='nominal' />
+    </datasource-dependencies>
+    <datasource-relationship source='sqlproxy.0a8sqpr06n70y51aboa451fwlhnr' target='sqlproxy.07la4s11pwtkes1c9rhj70zzexzy'>
+      <column-mapping>
+        <map key='[sqlproxy.0a8sqpr06n70y51aboa451fwlhnr].[none:Calculation_2324420365506445312:nk]' value='[sqlproxy.07la4s11pwtkes1c9rhj70zzexzy].[none:Calculation_2433069706516979712:nk]' />
+      </column-mapping>
+    </datasource-relationship>
+  </datasource-relationships>
+  <worksheets>
+    <worksheet name='WIP Quality Summary Sheet'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='minus_wip_quality_summary_wip' name='sqlproxy.0a8sqpr06n70y51aboa451fwlhnr' />
+            <datasource caption='wip_quality_summary_quality' name='sqlproxy.07la4s11pwtkes1c9rhj70zzexzy' />
+          </datasources>
+          <datasource-dependencies datasource='sqlproxy.07la4s11pwtkes1c9rhj70zzexzy'>
+            <column aggregation='Sum' datatype='real' default-type='quantitative' layered='true' name='[COUNT_SERIAL_NUMBER]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default' />
+            <column aggregation='Count' caption='wip_qual_summary_qual_sk' datatype='string' default-type='nominal' layered='true' name='[Calculation_2433069706516979712]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default'>
+              <calculation class='tableau' formula='STR([RR_FROM_OP_SEQ_NUM]) + &apos;_&apos; + STR([RR_ITEM_ID])' />
+            </column>
+            <column aggregation='User' caption='Total' datatype='real' default-format='n#,##0;-#,##0' default-type='quantitative' layered='true' name='[Calculation_2616028440642244613]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default'>
+              <calculation class='tableau' formula='SUM([sqlproxy.0a8sqpr06n70y51aboa451fwlhnr].[Op Qty in Queue])-[Calculation_969399827125456896]-[Calculation_969399827125456896 1]'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column aggregation='User' caption='Reroutes' datatype='real' default-format='n#,##0;-#,##0' default-type='quantitative' layered='true' name='[Calculation_969399827125456896 1]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default'>
+              <calculation class='tableau' formula='ZN(LOOKUP(SUM(IF [FEATURE] = &apos;Reroutes&apos; THEN [COUNT_SERIAL_NUMBER] ELSE NULL END),0))'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column aggregation='User' caption='Rejects' datatype='real' default-format='n#,##0;-#,##0' default-type='quantitative' layered='true' name='[Calculation_969399827125456896]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default'>
+              <calculation class='tableau' formula='ZN(LOOKUP(SUM(IF [FEATURE] = &apos;Rejects&apos; THEN [COUNT_SERIAL_NUMBER] ELSE NULL END),0))'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[FEATURE]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+            <column aggregation='Sum' datatype='real' default-type='quantitative' layered='true' name='[RR_FROM_OP_SEQ_NUM]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default' />
+            <column aggregation='Sum' datatype='real' default-type='quantitative' layered='true' name='[RR_ITEM_ID]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default' />
+            <column-instance column='[Calculation_2433069706516979712]' derivation='None' name='[none:Calculation_2433069706516979712:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_2616028440642244613]' derivation='User' name='[usr:Calculation_2616028440642244613:qk:2]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Columns' />
+              <table-calc field='[sqlproxy.07la4s11pwtkes1c9rhj70zzexzy].[Calculation_969399827125456896]' ordering-type='Columns' />
+              <table-calc field='[sqlproxy.07la4s11pwtkes1c9rhj70zzexzy].[Calculation_969399827125456896 1]' ordering-type='Columns' />
+            </column-instance>
+            <column-instance column='[Calculation_969399827125456896 1]' derivation='User' name='[usr:Calculation_969399827125456896 1:qk:1]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Columns' />
+            </column-instance>
+            <column-instance column='[Calculation_969399827125456896]' derivation='User' name='[usr:Calculation_969399827125456896:qk:1]' pivot='key' type='quantitative'>
+              <table-calc ordering-type='Columns' />
+            </column-instance>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='sqlproxy.0a8sqpr06n70y51aboa451fwlhnr'>
+            <column aggregation='Count' caption='wip_qual_summary_wip_sk' datatype='string' default-type='nominal' layered='true' name='[Calculation_2324420365506445312]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default'>
+              <calculation class='tableau' formula='STR([Op Seq Num]) + &apos;_&apos; + STR([wdj_primary_item_id])' />
+            </column>
+            <column caption='min(1)' datatype='integer' name='[Calculation_969399827130773506]' role='measure' type='quantitative' user:unnamed='WIP Quality Summary Sheet'>
+              <calculation class='tableau' formula='min(1)' />
+            </column>
+            <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[Job Class Code]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+            <column aggregation='Sum' datatype='real' default-type='ordinal' layered='true' name='[Line Number]' pivot='key' role='dimension' type='ordinal' user-datatype='real' visual-totals='Default' />
+            <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[Op Desc]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+            <column aggregation='Sum' datatype='real' default-format='n#,##0;-#,##0' default-type='quantitative' layered='true' name='[Op Qty in Queue]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default' />
+            <column aggregation='Sum' datatype='real' default-type='ordinal' layered='true' name='[Op Seq Num]' pivot='key' role='dimension' type='ordinal' user-datatype='real' visual-totals='Default' />
+            <column aggregation='Sum' datatype='real' default-format='n#,##0;-#,##0' default-type='quantitative' layered='true' name='[Op To Move]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default' />
+            <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[Part Number]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+            <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[Planner]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+            <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[Sales Order]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+            <column-instance column='[Calculation_2324420365506445312]' derivation='None' name='[none:Calculation_2324420365506445312:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Job Class Code]' derivation='None' name='[none:Job Class Code:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Line Number]' derivation='None' name='[none:Line Number:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Op Desc]' derivation='None' name='[none:Op Desc:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Op Seq Num]' derivation='None' name='[none:Op Seq Num:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Part Number]' derivation='None' name='[none:Part Number:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Planner]' derivation='None' name='[none:Planner:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Sales Order]' derivation='None' name='[none:Sales Order:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Op Qty in Queue]' derivation='Sum' name='[sum:Op Qty in Queue:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Op To Move]' derivation='Sum' name='[sum:Op To Move:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_969399827130773506]' derivation='User' name='[usr:Calculation_969399827130773506:qk]' pivot='key' type='quantitative' />
+            <column aggregation='Sum' datatype='real' default-type='quantitative' layered='true' name='[wdj_primary_item_id]' pivot='key' role='measure' type='quantitative' user-datatype='real' visual-totals='Default' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[sqlproxy.0a8sqpr06n70y51aboa451fwlhnr].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[sqlproxy.0a8sqpr06n70y51aboa451fwlhnr].[sum:Op Qty in Queue:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[sqlproxy.07la4s11pwtkes1c9rhj70zzexzy].[usr:Calculation_969399827125456896:qk:1]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[sqlproxy.07la4s11pwtkes1c9rhj70zzexzy].[usr:Calculation_969399827125456896 1:qk:1]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[sqlproxy.07la4s11pwtkes1c9rhj70zzexzy].[usr:Calculation_2616028440642244613:qk:2]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[sqlproxy.0a8sqpr06n70y51aboa451fwlhnr].[sum:Op To Move:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <manual-sort column='[sqlproxy.0a8sqpr06n70y51aboa451fwlhnr].[:Measure Names]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;[sqlproxy.0a8sqpr06n70y51aboa451fwlhnr].[sum:Op Qty in Queue:qk]&quot;</bucket>
+              <bucket>&quot;[sqlproxy.07la4s11pwtkes1c9rhj70zzexzy].[usr:Calculation_969399827125456896:qk:1]&quot;</bucket>
+              <bucket>&quot;[sqlproxy.07la4s11pwtkes1c9rhj70zzexzy].[usr:Calculation_969399827125456896 1:qk:1]&quot;</bucket>
+              <bucket>&quot;[sqlproxy.07la4s11pwtkes1c9rhj70zzexzy].[usr:Calculation_2616028440642244613:qk:2]&quot;</bucket>
+              <bucket>&quot;[sqlproxy.0a8sqpr06n70y51aboa451fwlhnr].[sum:Op To Move:qk]&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <filter class='categorical' column='[sqlproxy.0a8sqpr06n70y51aboa451fwlhnr].[none:Job Class Code:nk]'>
+            <groupfilter function='level-members' level='[none:Job Class Code:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[sqlproxy.0a8sqpr06n70y51aboa451fwlhnr].[none:Line Number:ok]'>
+            <groupfilter function='level-members' level='[none:Line Number:ok]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[sqlproxy.0a8sqpr06n70y51aboa451fwlhnr].[none:Op Desc:nk]'>
+            <groupfilter function='level-members' level='[none:Op Desc:nk]' />
+          </filter>
+          <filter class='categorical' column='[sqlproxy.0a8sqpr06n70y51aboa451fwlhnr].[none:Op Seq Num:ok]'>
+            <groupfilter function='level-members' level='[none:Op Seq Num:ok]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[sqlproxy.0a8sqpr06n70y51aboa451fwlhnr].[none:Part Number:nk]'>
+            <groupfilter function='level-members' level='[none:Part Number:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[sqlproxy.0a8sqpr06n70y51aboa451fwlhnr].[none:Planner:nk]'>
+            <groupfilter function='level-members' level='[none:Planner:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[sqlproxy.0a8sqpr06n70y51aboa451fwlhnr].[none:Sales Order:nk]'>
+            <groupfilter function='level-members' level='[none:Sales Order:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[sqlproxy.0a8sqpr06n70y51aboa451fwlhnr].[none:Planner:nk]</column>
+            <column>[sqlproxy.0a8sqpr06n70y51aboa451fwlhnr].[:Measure Names]</column>
+            <column>[sqlproxy.0a8sqpr06n70y51aboa451fwlhnr].[none:Sales Order:nk]</column>
+            <column>[sqlproxy.0a8sqpr06n70y51aboa451fwlhnr].[none:Job Class Code:nk]</column>
+            <column>[sqlproxy.0a8sqpr06n70y51aboa451fwlhnr].[none:Part Number:nk]</column>
+            <column>[sqlproxy.0a8sqpr06n70y51aboa451fwlhnr].[none:Line Number:ok]</column>
+            <column>[sqlproxy.0a8sqpr06n70y51aboa451fwlhnr].[none:Op Seq Num:ok]</column>
+            <column>[sqlproxy.0a8sqpr06n70y51aboa451fwlhnr].[none:Op Desc:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='cell-w' value='100' />
+            <format attr='cell-h' value='20' />
+            <format attr='cell' value='20' />
+            <format attr='cell-q' value='100' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='height' field='[sqlproxy.0a8sqpr06n70y51aboa451fwlhnr].[:Measure Names]' value='24' />
+            <format attr='width' field='[sqlproxy.0a8sqpr06n70y51aboa451fwlhnr].[none:Planner:nk]' value='140' />
+            <format attr='band-color' scope='rows' value='#f0eae8' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='band-size' scope='cols' value='0' />
+            <format attr='band-level' scope='rows' value='2' />
+            <format attr='band-size' scope='rows' value='1' />
+          </style-rule>
+          <style-rule element='table-div'>
+            <format attr='div-level' scope='rows' value='2' />
+            <format attr='stroke-size' scope='rows' value='2' />
+            <format attr='stroke-color' scope='rows' value='#000000' />
+          </style-rule>
+          <style-rule element='header-div'>
+            <format attr='line-visibility' scope='rows' value='on' />
+            <format attr='line-pattern-only' scope='rows' value='solid' />
+            <format attr='stroke-size' scope='rows' value='2' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[sqlproxy.0a8sqpr06n70y51aboa451fwlhnr].[:Measure Names]' />
+              <size column='[sqlproxy.0a8sqpr06n70y51aboa451fwlhnr].[usr:Calculation_969399827130773506:qk]' />
+              <lod column='[sqlproxy.0a8sqpr06n70y51aboa451fwlhnr].[none:Calculation_2324420365506445312:nk]' />
+              <lod column='[sqlproxy.07la4s11pwtkes1c9rhj70zzexzy].[none:Calculation_2433069706516979712:nk]' />
+              <text column='[sqlproxy.0a8sqpr06n70y51aboa451fwlhnr].[Multiple Values]' />
+            </encodings>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+                <format attr='vertical-align' value='center' />
+              </style-rule>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='user' />
+                <format attr='color' value='#ffffff' />
+                <format attr='font-weight' value='bold' />
+                <format attr='font-size' value='11' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='size' value='1.7471270561218262' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='aspect' value='0' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([sqlproxy.0a8sqpr06n70y51aboa451fwlhnr].[none:Planner:nk] / ([sqlproxy.0a8sqpr06n70y51aboa451fwlhnr].[none:Part Number:nk] / ([sqlproxy.0a8sqpr06n70y51aboa451fwlhnr].[none:Op Seq Num:ok] / [sqlproxy.0a8sqpr06n70y51aboa451fwlhnr].[none:Op Desc:nk])))</rows>
+        <cols>[sqlproxy.0a8sqpr06n70y51aboa451fwlhnr].[:Measure Names]</cols>
+        <join-lod-include-overrides>
+          <column>[sqlproxy.07la4s11pwtkes1c9rhj70zzexzy].[Calculation_2433069706516979712]</column>
+        </join-lod-include-overrides>
+      </table>
+      <simple-id uuid='{AA70F014-4E08-47A8-A7CE-848B31341CCB}' />
+    </worksheet>
+    <worksheet name='zz.QUAL Refresh At'>
+      <layout-options>
+        <caption>
+          <formatted-text>
+            <run>QUAL Refresh At:</run>
+            <run fontcolor='#b07aa1' fontsize='12'> &lt;Data Update Time&gt;</run>
+          </formatted-text>
+        </caption>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='wip_quality_summary_quality' name='sqlproxy.07la4s11pwtkes1c9rhj70zzexzy' />
+          </datasources>
+          <datasource-dependencies datasource='sqlproxy.07la4s11pwtkes1c9rhj70zzexzy'>
+            <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[FEATURE]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+            <column-instance column='[FEATURE]' derivation='Min' name='[min:FEATURE:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' value='5' />
+            <format attr='height' value='5' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <lod column='[sqlproxy.07la4s11pwtkes1c9rhj70zzexzy].[min:FEATURE:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#ffffff' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{D3C81B4C-2F8D-48BD-A129-7F3A19BCD43C}' />
+    </worksheet>
+    <worksheet name='zz.WIP Refresh At'>
+      <layout-options>
+        <caption>
+          <formatted-text>
+            <run>WIP Refresh At: </run>
+            <run bold='true' fontcolor='#4e79a7' fontsize='12'>&lt;Data Update Time&gt;</run>
+          </formatted-text>
+        </caption>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='minus_wip_quality_summary_wip' name='sqlproxy.0a8sqpr06n70y51aboa451fwlhnr' />
+          </datasources>
+          <datasource-dependencies datasource='sqlproxy.0a8sqpr06n70y51aboa451fwlhnr'>
+            <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[Job Class Code]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+            <column-instance column='[Job Class Code]' derivation='Min' name='[min:Job Class Code:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='height' value='6' />
+            <format attr='width' value='5' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Square' />
+            <encodings>
+              <lod column='[sqlproxy.0a8sqpr06n70y51aboa451fwlhnr].[min:Job Class Code:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#ffffff' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{69D70C82-E92E-4BEB-A13B-C552A134946F}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='WIP Quality Summary Dashboard'>
+      <repository-location derived-from='https://tableauanalytics.us.baesystems.com/t/ES/workbooks/WIPQualitySummary/WIPQualitySummaryDashboard?rev=' id='16723' path='/t/ES/workbooks/WIPQualitySummary' revision='' site='ES' />
+      <style />
+      <size maxheight='1300' maxwidth='1300' minheight='1300' minwidth='1300' sizing-mode='fixed' />
+      <datasources>
+        <datasource caption='minus_wip_quality_summary_wip' name='sqlproxy.0a8sqpr06n70y51aboa451fwlhnr' />
+      </datasources>
+      <datasource-dependencies datasource='sqlproxy.0a8sqpr06n70y51aboa451fwlhnr'>
+        <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[Job Class Code]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+        <column aggregation='Sum' datatype='real' default-type='ordinal' layered='true' name='[Line Number]' pivot='key' role='dimension' type='ordinal' user-datatype='real' visual-totals='Default' />
+        <column aggregation='Sum' datatype='real' default-type='ordinal' layered='true' name='[Op Seq Num]' pivot='key' role='dimension' type='ordinal' user-datatype='real' visual-totals='Default' />
+        <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[Part Number]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+        <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[Planner]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+        <column aggregation='Count' datatype='string' default-type='nominal' layered='true' name='[Sales Order]' pivot='key' role='dimension' type='nominal' user-datatype='string' visual-totals='Default' />
+        <column-instance column='[Job Class Code]' derivation='None' name='[none:Job Class Code:nk]' pivot='key' type='nominal' />
+        <column-instance column='[Line Number]' derivation='None' name='[none:Line Number:ok]' pivot='key' type='ordinal' />
+        <column-instance column='[Op Seq Num]' derivation='None' name='[none:Op Seq Num:ok]' pivot='key' type='ordinal' />
+        <column-instance column='[Part Number]' derivation='None' name='[none:Part Number:nk]' pivot='key' type='nominal' />
+        <column-instance column='[Planner]' derivation='None' name='[none:Planner:nk]' pivot='key' type='nominal' />
+        <column-instance column='[Sales Order]' derivation='None' name='[none:Sales Order:nk]' pivot='key' type='nominal' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98770' id='12' param='horz' type-v2='layout-flow' w='98770' x='615' y='615'>
+            <zone h='98770' id='5' param='vert' type-v2='layout-flow' w='85847' x='615' y='615'>
+              <zone fixed-size='60' h='4615' id='6' is-fixed='true' param='horz' type-v2='layout-flow' w='85847' x='615' y='615'>
+                <zone fixed-size='267' h='4615' id='8' is-fixed='true' name='zz.QUAL Refresh At' show-caption='true' show-title='false' w='21153' x='615' y='615'>
+                  <layout-cache fixed-size-h='69' type-h='fixed' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='245' h='4615' id='7' is-fixed='true' name='zz.WIP Refresh At' show-caption='true' show-title='false' w='19461' x='21768' y='615'>
+                  <layout-cache fixed-size-h='70' type-h='fixed' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='4615' id='9' type-v2='text' w='22616' x='41229' y='615'>
+                  <formatted-text>
+                    <run bold='true' fontsize='12'>WIP Quality Summary Dashboard</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone h='4615' id='10' type-v2='empty' w='22616' x='63845' y='615'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone h='94155' id='3' name='WIP Quality Summary Sheet' show-title='false' w='85847' x='615' y='5230'>
+                <layout-cache fixed-size-h='27406' fixed-size-w='1023' type-h='fixed' type-w='fixed' />
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+            <zone h='98770' id='15' param='vert' type-v2='layout-flow' w='12923' x='86462' y='615'>
+              <zone h='9538' id='20' name='WIP Quality Summary Sheet' pane-specification-id='0' param='[sqlproxy.0a8sqpr06n70y51aboa451fwlhnr].[:Measure Names]' type-v2='color' w='12923' x='86462' y='615'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='4230' id='17' mode='checkdropdown' name='WIP Quality Summary Sheet' param='[sqlproxy.0a8sqpr06n70y51aboa451fwlhnr].[none:Planner:nk]' show-apply='true' type-v2='filter' values='database' w='12923' x='86462' y='10153'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='4230' id='16' mode='checkdropdown' name='WIP Quality Summary Sheet' param='[sqlproxy.0a8sqpr06n70y51aboa451fwlhnr].[none:Part Number:nk]' show-apply='true' type-v2='filter' values='relevant' w='12923' x='86462' y='14383'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='4230' id='13' mode='checkdropdown' name='WIP Quality Summary Sheet' param='[sqlproxy.0a8sqpr06n70y51aboa451fwlhnr].[none:Sales Order:nk]' show-apply='true' type-v2='filter' values='relevant' w='12923' x='86462' y='18613'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='4230' id='64' mode='checkdropdown' name='WIP Quality Summary Sheet' param='[sqlproxy.0a8sqpr06n70y51aboa451fwlhnr].[none:Op Seq Num:ok]' type-v2='filter' values='relevant' w='12923' x='86462' y='22843'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='4230' id='63' mode='checkdropdown' name='WIP Quality Summary Sheet' param='[sqlproxy.0a8sqpr06n70y51aboa451fwlhnr].[none:Line Number:ok]' show-apply='true' type-v2='filter' values='database' w='12923' x='86462' y='27073'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='4230' id='14' mode='checkdropdown' name='WIP Quality Summary Sheet' param='[sqlproxy.0a8sqpr06n70y51aboa451fwlhnr].[none:Job Class Code:nk]' show-apply='true' type-v2='filter' values='database' w='12923' x='86462' y='31303'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='4000' id='25' type-v2='dashboard-object' w='12923' x='86462' y='35533'>
+                <button action='' button-click-action-metadata='crosstab' button-type='text'>
+                  <export-button-action>tabdoc:abstract-dashboard-button-export-wrapper dashboard-button-export-type=&quot;crosstab&quot; dashboarddoc-id=&quot;{04F075BE-918E-4DF1-A018-9334D468EBA2}&quot;</export-button-action>
+                  <button-visual-state>
+                    <caption>Download Excel</caption>
+                    <button-caption-font-style fontcolor='#ffffff' fontname='Tableau Bold' fontsize='12' />
+                    <format attr='background-color' value='#59a14f' />
+                  </button-visual-state>
+                </button>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='1000' minheight='1000' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='70' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98770' id='69' param='vert' type-v2='layout-flow' w='98770' x='615' y='615'>
+                <zone fixed-size='52' h='4615' id='8' is-fixed='true' name='zz.QUAL Refresh At' show-caption='true' show-title='false' w='21153' x='615' y='615'>
+                  <layout-cache fixed-size-h='69' type-h='fixed' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='52' h='4615' id='7' is-fixed='true' name='zz.WIP Refresh At' show-caption='true' show-title='false' w='19461' x='21768' y='615'>
+                  <layout-cache fixed-size-h='70' type-h='fixed' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='4615' id='9' type-v2='text' w='22616' x='41229' y='615'>
+                  <formatted-text>
+                    <run bold='true' fontsize='12'>WIP Quality Summary Dashboard</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='4230' id='17' mode='checkdropdown' name='WIP Quality Summary Sheet' param='[sqlproxy.0a8sqpr06n70y51aboa451fwlhnr].[none:Planner:nk]' show-apply='true' type-v2='filter' values='database' w='12923' x='86462' y='10153'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='4230' id='16' mode='checkdropdown' name='WIP Quality Summary Sheet' param='[sqlproxy.0a8sqpr06n70y51aboa451fwlhnr].[none:Part Number:nk]' show-apply='true' type-v2='filter' values='relevant' w='12923' x='86462' y='14383'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='4230' id='13' mode='checkdropdown' name='WIP Quality Summary Sheet' param='[sqlproxy.0a8sqpr06n70y51aboa451fwlhnr].[none:Sales Order:nk]' show-apply='true' type-v2='filter' values='relevant' w='12923' x='86462' y='18613'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='4230' id='64' mode='checkdropdown' name='WIP Quality Summary Sheet' param='[sqlproxy.0a8sqpr06n70y51aboa451fwlhnr].[none:Op Seq Num:ok]' type-v2='filter' values='relevant' w='12923' x='86462' y='22843'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='4230' id='63' mode='checkdropdown' name='WIP Quality Summary Sheet' param='[sqlproxy.0a8sqpr06n70y51aboa451fwlhnr].[none:Line Number:ok]' show-apply='true' type-v2='filter' values='database' w='12923' x='86462' y='27073'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='4230' id='14' mode='checkdropdown' name='WIP Quality Summary Sheet' param='[sqlproxy.0a8sqpr06n70y51aboa451fwlhnr].[none:Job Class Code:nk]' show-apply='true' type-v2='filter' values='database' w='12923' x='86462' y='31303'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='94155' id='3' is-fixed='true' name='WIP Quality Summary Sheet' show-title='false' w='85847' x='615' y='5230'>
+                  <layout-cache fixed-size-h='27406' fixed-size-w='1023' type-h='fixed' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='9538' id='20' name='WIP Quality Summary Sheet' pane-specification-id='0' param='[sqlproxy.0a8sqpr06n70y51aboa451fwlhnr].[:Measure Names]' type-v2='color' w='12923' x='86462' y='615'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='4000' id='25' type-v2='dashboard-object' w='12923' x='86462' y='35533'>
+                  <button action='' button-click-action-metadata='crosstab' button-type='text'>
+                    <export-button-action>tabdoc:abstract-dashboard-button-export-wrapper dashboard-button-export-type=&quot;crosstab&quot; dashboarddoc-id=&quot;{04F075BE-918E-4DF1-A018-9334D468EBA2}&quot;</export-button-action>
+                    <button-visual-state>
+                      <caption>Download Excel</caption>
+                      <button-caption-font-style fontcolor='#ffffff' fontname='Tableau Bold' fontsize='12' />
+                      <format attr='background-color' value='#59a14f' />
+                    </button-visual-state>
+                  </button>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{04F075BE-918E-4DF1-A018-9334D468EBA2}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='63'>
+    <window class='dashboard' maximized='true' name='WIP Quality Summary Dashboard'>
+      <viewpoints>
+        <viewpoint name='WIP Quality Summary Sheet' />
+        <viewpoint name='zz.QUAL Refresh At' />
+        <viewpoint name='zz.WIP Refresh At' />
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{62955C3A-D244-426F-AE09-41FE604B9575}' />
+    </window>
+    <window class='worksheet' name='WIP Quality Summary Sheet'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='29'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[sqlproxy.0a8sqpr06n70y51aboa451fwlhnr].[:Measure Names]' type='color' />
+            <card pane-specification-id='0' param='[sqlproxy.0a8sqpr06n70y51aboa451fwlhnr].[usr:Calculation_969399827130773506:qk]' type='size' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[sqlproxy.07la4s11pwtkes1c9rhj70zzexzy].[none:Calculation_2433069706516979712:nk]</field>
+            <field>[sqlproxy.0a8sqpr06n70y51aboa451fwlhnr].[:Measure Names]</field>
+            <field>[sqlproxy.0a8sqpr06n70y51aboa451fwlhnr].[my:Job Scheduled Start Date:ok]</field>
+            <field>[sqlproxy.0a8sqpr06n70y51aboa451fwlhnr].[none:Calculation_2324420365506445312:nk]</field>
+            <field>[sqlproxy.0a8sqpr06n70y51aboa451fwlhnr].[none:Job Class Code:nk]</field>
+            <field>[sqlproxy.0a8sqpr06n70y51aboa451fwlhnr].[none:Line Number:ok]</field>
+            <field>[sqlproxy.0a8sqpr06n70y51aboa451fwlhnr].[none:Op Desc:nk]</field>
+            <field>[sqlproxy.0a8sqpr06n70y51aboa451fwlhnr].[none:Op Seq Num:ok]</field>
+            <field>[sqlproxy.0a8sqpr06n70y51aboa451fwlhnr].[none:Part Number:nk]</field>
+            <field>[sqlproxy.0a8sqpr06n70y51aboa451fwlhnr].[none:Planner:nk]</field>
+            <field>[sqlproxy.0a8sqpr06n70y51aboa451fwlhnr].[none:Sales Order:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{0C923F2F-C355-46AB-9576-5DC919E158A7}' />
+    </window>
+    <window class='worksheet' hidden='true' name='zz.QUAL Refresh At'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='bottom'>
+          <strip size='96'>
+            <card type='caption' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[sqlproxy.07la4s11pwtkes1c9rhj70zzexzy].[min:FEATURE:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{1E660122-DE06-4BCC-9A7C-8F6C1E1FC9F0}' />
+    </window>
+    <window class='worksheet' hidden='true' name='zz.WIP Refresh At'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='bottom'>
+          <strip size='96'>
+            <card type='caption' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[sqlproxy.0a8sqpr06n70y51aboa451fwlhnr].[none:Job Class Code:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{A7508AD9-A253-4F5F-AC26-13EC7F9609A2}' />
+    </window>
+  </windows>
+</workbook>
